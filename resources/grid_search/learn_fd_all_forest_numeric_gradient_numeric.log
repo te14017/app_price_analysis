@@ -1,0 +1,304 @@
+price                           float64
+starRating                      float64
+category                         object
+totalNrOfReviews                float64
+installs                         object
+contentRating                    object
+appUrl                           object
+libraries                       float64
+bigCompany                      float64
+daysSinceLastUpdated            float64
+text                             object
+1starReviews                    float64
+2starReviews                    float64
+3starReviews                    float64
+4starReviews                    float64
+5starReviews                    float64
+requiredAndroidVersion_major    float64
+requiredAndroidVersion_minor    float64
+similarAppsAvgPrice             float64
+dtype: object
+(26151, 19) transformed data
+2 features dropped
+(26151, 16) X_all
+
+y_all value counts:
+2.0    0.280028
+1.0    0.277121
+3.0    0.242591
+4.0    0.200260
+Name: price, dtype: float64
+Fitting 10 folds for each of 6 candidates, totalling 60 fits
+[CV] forest__criterion=gini, forest__max_depth=3, forest__max_features=None, forest__n_estimators=50, forest__warm_start=False 
+[CV] forest__criterion=gini, forest__max_depth=3, forest__max_features=None, forest__n_estimators=50, forest__warm_start=False 
+[CV] forest__criterion=gini, forest__max_depth=3, forest__max_features=None, forest__n_estimators=50, forest__warm_start=False 
+[CV] forest__criterion=gini, forest__max_depth=3, forest__max_features=None, forest__n_estimators=50, forest__warm_start=False 
+[CV] forest__criterion=gini, forest__max_depth=3, forest__max_features=None, forest__n_estimators=50, forest__warm_start=False 
+[CV] forest__criterion=gini, forest__max_depth=3, forest__max_features=None, forest__n_estimators=50, forest__warm_start=False 
+[CV] forest__criterion=gini, forest__max_depth=3, forest__max_features=None, forest__n_estimators=50, forest__warm_start=False 
+[CV] forest__criterion=gini, forest__max_depth=3, forest__max_features=None, forest__n_estimators=50, forest__warm_start=False 
+[CV]  forest__criterion=gini, forest__max_depth=3, forest__max_features=None, forest__n_estimators=50, forest__warm_start=False, f1_weighted=0.3578023263832246, precision_weighted=0.35878249177264, recall_weighted=0.35918991211310664, accuracy=0.35918991211310664, total=18.2min
+[CV] forest__criterion=gini, forest__max_depth=3, forest__max_features=None, forest__n_estimators=50, forest__warm_start=False 
+[CV]  forest__criterion=gini, forest__max_depth=3, forest__max_features=None, forest__n_estimators=50, forest__warm_start=False, f1_weighted=0.33647733916968026, precision_weighted=0.3493604921459893, recall_weighted=0.3412304165074513, accuracy=0.3412304165074513, total=18.1min
+[Parallel(n_jobs=-1)]: Done   2 tasks      | elapsed: 43.6min
+[CV] forest__criterion=gini, forest__max_depth=3, forest__max_features=None, forest__n_estimators=50, forest__warm_start=False 
+[CV]  forest__criterion=gini, forest__max_depth=3, forest__max_features=None, forest__n_estimators=50, forest__warm_start=False, f1_weighted=0.40565759014391467, precision_weighted=0.40955913805108596, recall_weighted=0.4092472296522736, accuracy=0.4092472296522736, total=18.2min
+[CV] forest__criterion=gini, forest__max_depth=3, forest__max_features=None, forest__n_estimators=75, forest__warm_start=False 
+[CV]  forest__criterion=gini, forest__max_depth=3, forest__max_features=None, forest__n_estimators=50, forest__warm_start=False, f1_weighted=0.3552188035133475, precision_weighted=0.35409295544053454, recall_weighted=0.3581804281345566, accuracy=0.3581804281345566, total=18.3min
+[CV] forest__criterion=gini, forest__max_depth=3, forest__max_features=None, forest__n_estimators=75, forest__warm_start=False 
+[CV]  forest__criterion=gini, forest__max_depth=3, forest__max_features=None, forest__n_estimators=50, forest__warm_start=False, f1_weighted=0.3868519538911351, precision_weighted=0.3876506153956993, recall_weighted=0.3915869980879541, accuracy=0.3915869980879541, total=18.2min
+[CV] forest__criterion=gini, forest__max_depth=3, forest__max_features=None, forest__n_estimators=75, forest__warm_start=False 
+[CV]  forest__criterion=gini, forest__max_depth=3, forest__max_features=None, forest__n_estimators=50, forest__warm_start=False, f1_weighted=0.3754821904528293, precision_weighted=0.37630446093535236, recall_weighted=0.37782026768642446, accuracy=0.37782026768642446, total=18.2min
+[CV] forest__criterion=gini, forest__max_depth=3, forest__max_features=None, forest__n_estimators=75, forest__warm_start=False 
+[CV]  forest__criterion=gini, forest__max_depth=3, forest__max_features=None, forest__n_estimators=50, forest__warm_start=False, f1_weighted=0.40447000142544415, precision_weighted=0.4056151930918128, recall_weighted=0.4080305927342256, accuracy=0.4080305927342256, total=18.2min
+[CV] forest__criterion=gini, forest__max_depth=3, forest__max_features=None, forest__n_estimators=75, forest__warm_start=False 
+[CV]  forest__criterion=gini, forest__max_depth=3, forest__max_features=None, forest__n_estimators=50, forest__warm_start=False, f1_weighted=0.3704472645318818, precision_weighted=0.37629201146159025, recall_weighted=0.3742824339839265, accuracy=0.3742824339839265, total=18.2min
+[CV] forest__criterion=gini, forest__max_depth=3, forest__max_features=None, forest__n_estimators=75, forest__warm_start=False 
+[CV]  forest__criterion=gini, forest__max_depth=3, forest__max_features=None, forest__n_estimators=75, forest__warm_start=False, f1_weighted=0.3440517098036614, precision_weighted=0.3448577375040354, recall_weighted=0.3454337027130302, accuracy=0.3454337027130302, total=17.8min
+[CV] forest__criterion=gini, forest__max_depth=3, forest__max_features=None, forest__n_estimators=75, forest__warm_start=False 
+[CV]  forest__criterion=gini, forest__max_depth=3, forest__max_features=None, forest__n_estimators=75, forest__warm_start=False, f1_weighted=0.33656267966017933, precision_weighted=0.349557436938608, recall_weighted=0.3412304165074513, accuracy=0.3412304165074513, total=17.8min
+[CV] forest__criterion=gini, forest__max_depth=3, forest__max_features=None, forest__n_estimators=75, forest__warm_start=False 
+[CV]  forest__criterion=gini, forest__max_depth=3, forest__max_features=None, forest__n_estimators=50, forest__warm_start=False, f1_weighted=0.39397092543742124, precision_weighted=0.39703920076320875, recall_weighted=0.39686184462303864, accuracy=0.39686184462303864, total=17.8min
+[CV] forest__criterion=gini, forest__max_depth=3, forest__max_features=None, forest__n_estimators=75, forest__warm_start=False 
+[CV]  forest__criterion=gini, forest__max_depth=3, forest__max_features=None, forest__n_estimators=75, forest__warm_start=False, f1_weighted=0.4020285974568041, precision_weighted=0.40558241064554934, recall_weighted=0.4058081773022545, accuracy=0.4058081773022545, total=17.9min
+[CV] forest__criterion=gini, forest__max_depth=3, forest__max_features=None, forest__n_estimators=75, forest__warm_start=False 
+[CV]  forest__criterion=gini, forest__max_depth=3, forest__max_features=None, forest__n_estimators=50, forest__warm_start=False, f1_weighted=0.3809498467301837, precision_weighted=0.38845051890541216, recall_weighted=0.3880597014925373, accuracy=0.3880597014925373, total=17.7min
+[CV] forest__criterion=gini, forest__max_depth=3, forest__max_features=None, forest__n_estimators=100, forest__warm_start=False 
+[CV]  forest__criterion=gini, forest__max_depth=3, forest__max_features=None, forest__n_estimators=75, forest__warm_start=False, f1_weighted=0.35314580081359453, precision_weighted=0.3520381350463891, recall_weighted=0.3558868501529052, accuracy=0.3558868501529052, total=17.9min
+[CV] forest__criterion=gini, forest__max_depth=3, forest__max_features=None, forest__n_estimators=100, forest__warm_start=False 
+[CV]  forest__criterion=gini, forest__max_depth=3, forest__max_features=None, forest__n_estimators=75, forest__warm_start=False, f1_weighted=0.3740502617913215, precision_weighted=0.37464769311279444, recall_weighted=0.37743785850860423, accuracy=0.37743785850860423, total=17.8min
+[CV] forest__criterion=gini, forest__max_depth=3, forest__max_features=None, forest__n_estimators=100, forest__warm_start=False 
+[CV]  forest__criterion=gini, forest__max_depth=3, forest__max_features=None, forest__n_estimators=75, forest__warm_start=False, f1_weighted=0.3845211765571197, precision_weighted=0.3852126702795568, recall_weighted=0.3896749521988528, accuracy=0.3896749521988528, total=17.8min
+[CV] forest__criterion=gini, forest__max_depth=3, forest__max_features=None, forest__n_estimators=100, forest__warm_start=False 
+[CV]  forest__criterion=gini, forest__max_depth=3, forest__max_features=None, forest__n_estimators=75, forest__warm_start=False, f1_weighted=0.39788702659510145, precision_weighted=0.4000557542518943, recall_weighted=0.40152963671128106, accuracy=0.40152963671128106, total=17.8min
+[CV] forest__criterion=gini, forest__max_depth=3, forest__max_features=None, forest__n_estimators=100, forest__warm_start=False 
+[CV]  forest__criterion=gini, forest__max_depth=3, forest__max_features=None, forest__n_estimators=100, forest__warm_start=False, f1_weighted=0.3463973749351855, precision_weighted=0.34768104205818073, recall_weighted=0.34849063813526937, accuracy=0.34849063813526937, total=17.9min
+[CV] forest__criterion=gini, forest__max_depth=3, forest__max_features=None, forest__n_estimators=100, forest__warm_start=False 
+[CV]  forest__criterion=gini, forest__max_depth=3, forest__max_features=None, forest__n_estimators=100, forest__warm_start=False, f1_weighted=0.33955443729947926, precision_weighted=0.35094487412284253, recall_weighted=0.3442873519296905, accuracy=0.3442873519296905, total=17.8min
+[CV] forest__criterion=gini, forest__max_depth=3, forest__max_features=None, forest__n_estimators=100, forest__warm_start=False 
+[CV]  forest__criterion=gini, forest__max_depth=3, forest__max_features=None, forest__n_estimators=75, forest__warm_start=False, f1_weighted=0.3891483748637407, precision_weighted=0.39194745245387025, recall_weighted=0.3922694221201684, accuracy=0.3922694221201684, total=17.9min
+[CV] forest__criterion=gini, forest__max_depth=3, forest__max_features=None, forest__n_estimators=100, forest__warm_start=False 
+[CV]  forest__criterion=gini, forest__max_depth=3, forest__max_features=None, forest__n_estimators=75, forest__warm_start=False, f1_weighted=0.3683979767134482, precision_weighted=0.3738938090833264, recall_weighted=0.37122081898201303, accuracy=0.37122081898201303, total=17.8min
+[CV] forest__criterion=gini, forest__max_depth=3, forest__max_features=None, forest__n_estimators=100, forest__warm_start=False 
+[CV]  forest__criterion=gini, forest__max_depth=3, forest__max_features=None, forest__n_estimators=75, forest__warm_start=False, f1_weighted=0.3804632538370925, precision_weighted=0.38784959490536675, recall_weighted=0.3876769996172981, accuracy=0.3876769996172981, total=17.8min
+[CV] forest__criterion=gini, forest__max_depth=3, forest__max_features=None, forest__n_estimators=100, forest__warm_start=False 
+[CV]  forest__criterion=gini, forest__max_depth=3, forest__max_features=None, forest__n_estimators=100, forest__warm_start=False, f1_weighted=0.4018150395326163, precision_weighted=0.4052093687639721, recall_weighted=0.4054260603744746, accuracy=0.4054260603744746, total=17.9min
+[CV]  forest__criterion=gini, forest__max_depth=3, forest__max_features=None, forest__n_estimators=100, forest__warm_start=False, f1_weighted=0.3372313038127381, precision_weighted=0.3359786146060011, recall_weighted=0.34021406727828746, accuracy=0.34021406727828746, total=18.0min
+[CV] forest__criterion=gini, forest__max_depth=5, forest__max_features=None, forest__n_estimators=50, forest__warm_start=False 
+[CV] forest__criterion=gini, forest__max_depth=5, forest__max_features=None, forest__n_estimators=50, forest__warm_start=False 
+[CV]  forest__criterion=gini, forest__max_depth=3, forest__max_features=None, forest__n_estimators=100, forest__warm_start=False, f1_weighted=0.3747012581202072, precision_weighted=0.3752383288869685, recall_weighted=0.37782026768642446, accuracy=0.37782026768642446, total=18.8min
+[CV] forest__criterion=gini, forest__max_depth=5, forest__max_features=None, forest__n_estimators=50, forest__warm_start=False 
+[CV]  forest__criterion=gini, forest__max_depth=3, forest__max_features=None, forest__n_estimators=100, forest__warm_start=False, f1_weighted=0.38062052455397105, precision_weighted=0.3816763249332757, recall_weighted=0.3858508604206501, accuracy=0.3858508604206501, total=18.8min
+[CV] forest__criterion=gini, forest__max_depth=5, forest__max_features=None, forest__n_estimators=50, forest__warm_start=False 
+[CV]  forest__criterion=gini, forest__max_depth=5, forest__max_features=None, forest__n_estimators=50, forest__warm_start=False, f1_weighted=0.34934149821015714, precision_weighted=0.35036144001066627, recall_weighted=0.3507833397019488, accuracy=0.3507833397019488, total=18.8min
+[CV] forest__criterion=gini, forest__max_depth=5, forest__max_features=None, forest__n_estimators=50, forest__warm_start=False 
+[CV]  forest__criterion=gini, forest__max_depth=5, forest__max_features=None, forest__n_estimators=50, forest__warm_start=False, f1_weighted=0.3411966272154948, precision_weighted=0.3528002875602981, recall_weighted=0.3454337027130302, accuracy=0.3454337027130302, total=18.7min
+[CV] forest__criterion=gini, forest__max_depth=5, forest__max_features=None, forest__n_estimators=50, forest__warm_start=False 
+[CV]  forest__criterion=gini, forest__max_depth=3, forest__max_features=None, forest__n_estimators=100, forest__warm_start=False, f1_weighted=0.4066855167612677, precision_weighted=0.40787913586575153, recall_weighted=0.4103250478011472, accuracy=0.4103250478011472, total=18.8min
+[CV] forest__criterion=gini, forest__max_depth=5, forest__max_features=None, forest__n_estimators=50, forest__warm_start=False 
+[CV]  forest__criterion=gini, forest__max_depth=3, forest__max_features=None, forest__n_estimators=100, forest__warm_start=False, f1_weighted=0.37573575313931773, precision_weighted=0.3808318674957459, recall_weighted=0.3788748564867968, accuracy=0.3788748564867968, total=18.7min
+[CV] forest__criterion=gini, forest__max_depth=5, forest__max_features=None, forest__n_estimators=50, forest__warm_start=False 
+[CV]  forest__criterion=gini, forest__max_depth=3, forest__max_features=None, forest__n_estimators=100, forest__warm_start=False, f1_weighted=0.3943947662687134, precision_weighted=0.3977141411017919, recall_weighted=0.39724454649827784, accuracy=0.39724454649827784, total=18.8min
+[CV] forest__criterion=gini, forest__max_depth=5, forest__max_features=None, forest__n_estimators=50, forest__warm_start=False 
+[CV]  forest__criterion=gini, forest__max_depth=3, forest__max_features=None, forest__n_estimators=100, forest__warm_start=False, f1_weighted=0.3811352468661619, precision_weighted=0.38809906753331525, recall_weighted=0.3884424033677765, accuracy=0.3884424033677765, total=18.7min
+[CV] forest__criterion=gini, forest__max_depth=5, forest__max_features=None, forest__n_estimators=50, forest__warm_start=False 
+[CV]  forest__criterion=gini, forest__max_depth=5, forest__max_features=None, forest__n_estimators=50, forest__warm_start=False, f1_weighted=0.4030921287167529, precision_weighted=0.40643750279393215, recall_weighted=0.4065724111578143, accuracy=0.4065724111578143, total=17.9min
+[CV] forest__criterion=gini, forest__max_depth=5, forest__max_features=None, forest__n_estimators=75, forest__warm_start=False 
+[CV]  forest__criterion=gini, forest__max_depth=5, forest__max_features=None, forest__n_estimators=50, forest__warm_start=False, f1_weighted=0.35578595630717236, precision_weighted=0.35456983047267476, recall_weighted=0.35894495412844035, accuracy=0.35894495412844035, total=17.9min
+[CV] forest__criterion=gini, forest__max_depth=5, forest__max_features=None, forest__n_estimators=75, forest__warm_start=False 
+[CV]  forest__criterion=gini, forest__max_depth=5, forest__max_features=None, forest__n_estimators=50, forest__warm_start=False, f1_weighted=0.38497401550201826, precision_weighted=0.38626236355715116, recall_weighted=0.3869980879541109, accuracy=0.3869980879541109, total=17.8min
+[CV] forest__criterion=gini, forest__max_depth=5, forest__max_features=None, forest__n_estimators=75, forest__warm_start=False 
+[CV]  forest__criterion=gini, forest__max_depth=5, forest__max_features=None, forest__n_estimators=50, forest__warm_start=False, f1_weighted=0.379299536523245, precision_weighted=0.3794979503019949, recall_weighted=0.3847036328871893, accuracy=0.3847036328871893, total=17.8min
+[CV] forest__criterion=gini, forest__max_depth=5, forest__max_features=None, forest__n_estimators=75, forest__warm_start=False 
+[CV]  forest__criterion=gini, forest__max_depth=5, forest__max_features=None, forest__n_estimators=50, forest__warm_start=False, f1_weighted=0.4058815414393664, precision_weighted=0.40766336348906135, recall_weighted=0.40879541108986617, accuracy=0.40879541108986617, total=17.8min
+[CV] forest__criterion=gini, forest__max_depth=5, forest__max_features=None, forest__n_estimators=75, forest__warm_start=False 
+[CV]  forest__criterion=gini, forest__max_depth=5, forest__max_features=None, forest__n_estimators=50, forest__warm_start=False, f1_weighted=0.3656435773506569, precision_weighted=0.37130810918847273, recall_weighted=0.3685419058553387, accuracy=0.3685419058553387, total=17.8min
+[CV] forest__criterion=gini, forest__max_depth=5, forest__max_features=None, forest__n_estimators=75, forest__warm_start=False 
+[CV]  forest__criterion=gini, forest__max_depth=5, forest__max_features=None, forest__n_estimators=50, forest__warm_start=False, f1_weighted=0.38896625823152614, precision_weighted=0.39302017150489044, recall_weighted=0.39150401836969, accuracy=0.39150401836969, total=17.8min
+[CV] forest__criterion=gini, forest__max_depth=5, forest__max_features=None, forest__n_estimators=75, forest__warm_start=False 
+[CV]  forest__criterion=gini, forest__max_depth=5, forest__max_features=None, forest__n_estimators=50, forest__warm_start=False, f1_weighted=0.3800361311553962, precision_weighted=0.3869607915379424, recall_weighted=0.3872942977420589, accuracy=0.3872942977420589, total=17.7min
+[CV] forest__criterion=gini, forest__max_depth=5, forest__max_features=None, forest__n_estimators=75, forest__warm_start=False 
+[CV]  forest__criterion=gini, forest__max_depth=5, forest__max_features=None, forest__n_estimators=75, forest__warm_start=False, f1_weighted=0.34817482200049454, precision_weighted=0.34925714528212104, recall_weighted=0.3496369889186091, accuracy=0.3496369889186091, total=17.8min
+[CV] forest__criterion=gini, forest__max_depth=5, forest__max_features=None, forest__n_estimators=75, forest__warm_start=False 
+[CV]  forest__criterion=gini, forest__max_depth=5, forest__max_features=None, forest__n_estimators=75, forest__warm_start=False, f1_weighted=0.3410874973589209, precision_weighted=0.35275297709155357, recall_weighted=0.3458158196408101, accuracy=0.3458158196408101, total=17.7min
+[CV] forest__criterion=gini, forest__max_depth=5, forest__max_features=None, forest__n_estimators=75, forest__warm_start=False 
+[CV]  forest__criterion=gini, forest__max_depth=5, forest__max_features=None, forest__n_estimators=75, forest__warm_start=False, f1_weighted=0.4013931408143902, precision_weighted=0.40500545089925527, recall_weighted=0.4050439434466947, accuracy=0.4050439434466947, total=17.9min
+[CV] forest__criterion=gini, forest__max_depth=5, forest__max_features=None, forest__n_estimators=100, forest__warm_start=False 
+[CV]  forest__criterion=gini, forest__max_depth=5, forest__max_features=None, forest__n_estimators=75, forest__warm_start=False, f1_weighted=0.3525745215578527, precision_weighted=0.3514833103056101, recall_weighted=0.3551223241590214, accuracy=0.3551223241590214, total=17.9min
+[CV] forest__criterion=gini, forest__max_depth=5, forest__max_features=None, forest__n_estimators=100, forest__warm_start=False 
+[CV]  forest__criterion=gini, forest__max_depth=5, forest__max_features=None, forest__n_estimators=75, forest__warm_start=False, f1_weighted=0.3753274424981868, precision_weighted=0.37595966298594463, recall_weighted=0.37782026768642446, accuracy=0.37782026768642446, total=17.8min
+[CV] forest__criterion=gini, forest__max_depth=5, forest__max_features=None, forest__n_estimators=100, forest__warm_start=False 
+[CV]  forest__criterion=gini, forest__max_depth=5, forest__max_features=None, forest__n_estimators=75, forest__warm_start=False, f1_weighted=0.37842547981373725, precision_weighted=0.3788168934242758, recall_weighted=0.38393881453154877, accuracy=0.38393881453154877, total=17.8min
+[CV] forest__criterion=gini, forest__max_depth=5, forest__max_features=None, forest__n_estimators=100, forest__warm_start=False 
+[CV]  forest__criterion=gini, forest__max_depth=5, forest__max_features=None, forest__n_estimators=75, forest__warm_start=False, f1_weighted=0.3707881871158387, precision_weighted=0.37676311730516465, recall_weighted=0.3738997321086873, accuracy=0.3738997321086873, total=17.7min
+[CV] forest__criterion=gini, forest__max_depth=5, forest__max_features=None, forest__n_estimators=100, forest__warm_start=False 
+[CV]  forest__criterion=gini, forest__max_depth=5, forest__max_features=None, forest__n_estimators=75, forest__warm_start=False, f1_weighted=0.40709891043785373, precision_weighted=0.4081974296630891, recall_weighted=0.4107074569789675, accuracy=0.4107074569789675, total=17.8min
+[CV] forest__criterion=gini, forest__max_depth=5, forest__max_features=None, forest__n_estimators=100, forest__warm_start=False 
+[CV]  forest__criterion=gini, forest__max_depth=5, forest__max_features=None, forest__n_estimators=75, forest__warm_start=False, f1_weighted=0.3946467794194079, precision_weighted=0.39762123936270405, recall_weighted=0.39762724837351704, accuracy=0.39762724837351704, total=17.7min
+[CV] forest__criterion=gini, forest__max_depth=5, forest__max_features=None, forest__n_estimators=100, forest__warm_start=False 
+[CV]  forest__criterion=gini, forest__max_depth=5, forest__max_features=None, forest__n_estimators=100, forest__warm_start=False, f1_weighted=0.3452457841747472, precision_weighted=0.3460480402260241, recall_weighted=0.3465800534963699, accuracy=0.3465800534963699, total=17.8min
+[CV] forest__criterion=gini, forest__max_depth=5, forest__max_features=None, forest__n_estimators=100, forest__warm_start=False 
+[CV]  forest__criterion=gini, forest__max_depth=5, forest__max_features=None, forest__n_estimators=75, forest__warm_start=False, f1_weighted=0.38028975419348277, precision_weighted=0.38788005037984474, recall_weighted=0.3872942977420589, accuracy=0.3872942977420589, total=17.7min
+[CV] forest__criterion=gini, forest__max_depth=5, forest__max_features=None, forest__n_estimators=100, forest__warm_start=False 
+[CV]  forest__criterion=gini, forest__max_depth=5, forest__max_features=None, forest__n_estimators=100, forest__warm_start=False, f1_weighted=0.34115694640705796, precision_weighted=0.3522971029228912, recall_weighted=0.3454337027130302, accuracy=0.3454337027130302, total=17.8min
+[CV] forest__criterion=gini, forest__max_depth=5, forest__max_features=None, forest__n_estimators=100, forest__warm_start=False 
+[CV]  forest__criterion=gini, forest__max_depth=5, forest__max_features=None, forest__n_estimators=100, forest__warm_start=False, f1_weighted=0.40137798504746186, precision_weighted=0.40470320296086626, recall_weighted=0.4050439434466947, accuracy=0.4050439434466947, total=17.9min
+[CV]  forest__criterion=gini, forest__max_depth=5, forest__max_features=None, forest__n_estimators=100, forest__warm_start=False, f1_weighted=0.35045996151230974, precision_weighted=0.34938258558069873, recall_weighted=0.35282874617737003, accuracy=0.35282874617737003, total=17.9min
+[CV]  forest__criterion=gini, forest__max_depth=5, forest__max_features=None, forest__n_estimators=100, forest__warm_start=False, f1_weighted=0.37468811428058585, precision_weighted=0.3753395971828904, recall_weighted=0.37705544933078394, accuracy=0.37705544933078394, total=17.8min
+[CV]  forest__criterion=gini, forest__max_depth=5, forest__max_features=None, forest__n_estimators=100, forest__warm_start=False, f1_weighted=0.38002163419969204, precision_weighted=0.38108252687782784, recall_weighted=0.3847036328871893, accuracy=0.3847036328871893, total=17.8min
+[CV]  forest__criterion=gini, forest__max_depth=5, forest__max_features=None, forest__n_estimators=100, forest__warm_start=False, f1_weighted=0.40475151960651623, precision_weighted=0.4061052373865837, recall_weighted=0.4084130019120459, accuracy=0.4084130019120459, total= 9.9min
+[CV]  forest__criterion=gini, forest__max_depth=5, forest__max_features=None, forest__n_estimators=100, forest__warm_start=False, f1_weighted=0.38919188966253765, precision_weighted=0.3920497383028057, recall_weighted=0.3922694221201684, accuracy=0.3922694221201684, total= 9.7min
+[Parallel(n_jobs=-1)]: Done  58 out of  60 | elapsed: 327.6min remaining: 11.3min
+[CV]  forest__criterion=gini, forest__max_depth=5, forest__max_features=None, forest__n_estimators=100, forest__warm_start=False, f1_weighted=0.3713836171642096, precision_weighted=0.3775563985280937, recall_weighted=0.3742824339839265, accuracy=0.3742824339839265, total= 9.8min
+[CV]  forest__criterion=gini, forest__max_depth=5, forest__max_features=None, forest__n_estimators=100, forest__warm_start=False, f1_weighted=0.3835205165365025, precision_weighted=0.38959407899568915, recall_weighted=0.38997321086873327, accuracy=0.38997321086873327, total= 9.7min
+[Parallel(n_jobs=-1)]: Done  60 out of  60 | elapsed: 327.7min finished
+Fitting 10 folds for each of 6 candidates, totalling 60 fits
+[CV] gradient__learning_rate=0.01, gradient__loss=deviance, gradient__max_depth=3, gradient__max_features=None, gradient__n_estimators=150 
+[CV] gradient__learning_rate=0.01, gradient__loss=deviance, gradient__max_depth=3, gradient__max_features=None, gradient__n_estimators=150 
+[CV] gradient__learning_rate=0.01, gradient__loss=deviance, gradient__max_depth=3, gradient__max_features=None, gradient__n_estimators=150 
+[CV] gradient__learning_rate=0.01, gradient__loss=deviance, gradient__max_depth=3, gradient__max_features=None, gradient__n_estimators=150 
+[CV] gradient__learning_rate=0.01, gradient__loss=deviance, gradient__max_depth=3, gradient__max_features=None, gradient__n_estimators=150 
+[CV] gradient__learning_rate=0.01, gradient__loss=deviance, gradient__max_depth=3, gradient__max_features=None, gradient__n_estimators=150 
+[CV] gradient__learning_rate=0.01, gradient__loss=deviance, gradient__max_depth=3, gradient__max_features=None, gradient__n_estimators=150 
+[CV] gradient__learning_rate=0.01, gradient__loss=deviance, gradient__max_depth=3, gradient__max_features=None, gradient__n_estimators=150 
+[CV]  gradient__learning_rate=0.01, gradient__loss=deviance, gradient__max_depth=3, gradient__max_features=None, gradient__n_estimators=150, f1_weighted=0.34406666883880027, precision_weighted=0.3448864648549115, recall_weighted=0.3454337027130302, accuracy=0.3454337027130302, total=18.2min
+[CV] gradient__learning_rate=0.01, gradient__loss=deviance, gradient__max_depth=3, gradient__max_features=None, gradient__n_estimators=150 
+[CV]  gradient__learning_rate=0.01, gradient__loss=deviance, gradient__max_depth=3, gradient__max_features=None, gradient__n_estimators=150, f1_weighted=0.33656267966017933, precision_weighted=0.349557436938608, recall_weighted=0.3412304165074513, accuracy=0.3412304165074513, total=18.2min
+[Parallel(n_jobs=-1)]: Done   2 tasks      | elapsed: 43.7min
+[CV] gradient__learning_rate=0.01, gradient__loss=deviance, gradient__max_depth=3, gradient__max_features=None, gradient__n_estimators=150 
+[CV]  gradient__learning_rate=0.01, gradient__loss=deviance, gradient__max_depth=3, gradient__max_features=None, gradient__n_estimators=150, f1_weighted=0.4020285974568041, precision_weighted=0.40558241064554934, recall_weighted=0.4058081773022545, accuracy=0.4058081773022545, total=18.3min
+[CV] gradient__learning_rate=0.01, gradient__loss=deviance, gradient__max_depth=5, gradient__max_features=None, gradient__n_estimators=150 
+[CV]  gradient__learning_rate=0.01, gradient__loss=deviance, gradient__max_depth=3, gradient__max_features=None, gradient__n_estimators=150, f1_weighted=0.35314580081359453, precision_weighted=0.3520381350463891, recall_weighted=0.3558868501529052, accuracy=0.3558868501529052, total=18.4min
+[CV] gradient__learning_rate=0.01, gradient__loss=deviance, gradient__max_depth=5, gradient__max_features=None, gradient__n_estimators=150 
+[CV]  gradient__learning_rate=0.01, gradient__loss=deviance, gradient__max_depth=3, gradient__max_features=None, gradient__n_estimators=150, f1_weighted=0.3845211765571197, precision_weighted=0.3852126702795568, recall_weighted=0.3896749521988528, accuracy=0.3896749521988528, total=18.3min
+[CV] gradient__learning_rate=0.01, gradient__loss=deviance, gradient__max_depth=5, gradient__max_features=None, gradient__n_estimators=150 
+[CV]  gradient__learning_rate=0.01, gradient__loss=deviance, gradient__max_depth=3, gradient__max_features=None, gradient__n_estimators=150, f1_weighted=0.3731879514508201, precision_weighted=0.3738720174917269, recall_weighted=0.37667304015296366, accuracy=0.37667304015296366, total=18.3min
+[CV] gradient__learning_rate=0.01, gradient__loss=deviance, gradient__max_depth=5, gradient__max_features=None, gradient__n_estimators=150 
+[CV]  gradient__learning_rate=0.01, gradient__loss=deviance, gradient__max_depth=3, gradient__max_features=None, gradient__n_estimators=150, f1_weighted=0.4039197789318791, precision_weighted=0.4060346806726264, recall_weighted=0.40688336520076485, accuracy=0.40688336520076485, total=18.3min
+[CV] gradient__learning_rate=0.01, gradient__loss=deviance, gradient__max_depth=5, gradient__max_features=None, gradient__n_estimators=150 
+[CV]  gradient__learning_rate=0.01, gradient__loss=deviance, gradient__max_depth=3, gradient__max_features=None, gradient__n_estimators=150, f1_weighted=0.36819035925327126, precision_weighted=0.37398635850586276, recall_weighted=0.37083811710677383, accuracy=0.37083811710677383, total=18.2min
+[CV] gradient__learning_rate=0.01, gradient__loss=deviance, gradient__max_depth=5, gradient__max_features=None, gradient__n_estimators=150 
+[CV]  gradient__learning_rate=0.01, gradient__loss=deviance, gradient__max_depth=3, gradient__max_features=None, gradient__n_estimators=150, f1_weighted=0.38377627734539155, precision_weighted=0.3880779949177552, recall_weighted=0.3865288939915806, accuracy=0.3865288939915806, total=18.0min
+[CV] gradient__learning_rate=0.01, gradient__loss=deviance, gradient__max_depth=5, gradient__max_features=None, gradient__n_estimators=150 
+[CV]  gradient__learning_rate=0.01, gradient__loss=deviance, gradient__max_depth=5, gradient__max_features=None, gradient__n_estimators=150, f1_weighted=0.3609734986086656, precision_weighted=0.36209098530108674, recall_weighted=0.3622468475353458, accuracy=0.3622468475353458, total=18.5min
+[CV] gradient__learning_rate=0.01, gradient__loss=deviance, gradient__max_depth=5, gradient__max_features=None, gradient__n_estimators=150 
+[CV]  gradient__learning_rate=0.01, gradient__loss=deviance, gradient__max_depth=3, gradient__max_features=None, gradient__n_estimators=150, f1_weighted=0.3810575736270412, precision_weighted=0.38738356731161405, recall_weighted=0.3880597014925373, accuracy=0.3880597014925373, total=18.0min
+[CV] gradient__learning_rate=0.01, gradient__loss=deviance, gradient__max_depth=5, gradient__max_features=None, gradient__n_estimators=150 
+[CV]  gradient__learning_rate=0.01, gradient__loss=deviance, gradient__max_depth=5, gradient__max_features=None, gradient__n_estimators=150, f1_weighted=0.3379688083454899, precision_weighted=0.34872052333285464, recall_weighted=0.342376767290791, accuracy=0.342376767290791, total=18.4min
+[CV] gradient__learning_rate=0.01, gradient__loss=deviance, gradient__max_depth=5, gradient__max_features=None, gradient__n_estimators=150 
+[CV]  gradient__learning_rate=0.01, gradient__loss=deviance, gradient__max_depth=5, gradient__max_features=None, gradient__n_estimators=150, f1_weighted=0.35196941116879776, precision_weighted=0.35094415799716644, recall_weighted=0.3547400611620795, accuracy=0.3547400611620795, total=18.5min
+[CV] gradient__learning_rate=0.1, gradient__loss=deviance, gradient__max_depth=3, gradient__max_features=None, gradient__n_estimators=150 
+[CV]  gradient__learning_rate=0.01, gradient__loss=deviance, gradient__max_depth=5, gradient__max_features=None, gradient__n_estimators=150, f1_weighted=0.40266156737181424, precision_weighted=0.4065479886486845, recall_weighted=0.4065724111578143, accuracy=0.4065724111578143, total=18.5min
+[CV] gradient__learning_rate=0.1, gradient__loss=deviance, gradient__max_depth=3, gradient__max_features=None, gradient__n_estimators=150 
+[CV]  gradient__learning_rate=0.01, gradient__loss=deviance, gradient__max_depth=5, gradient__max_features=None, gradient__n_estimators=150, f1_weighted=0.3768665174343951, precision_weighted=0.3776189011802879, recall_weighted=0.37896749521988526, accuracy=0.37896749521988526, total=18.4min
+[CV] gradient__learning_rate=0.1, gradient__loss=deviance, gradient__max_depth=3, gradient__max_features=None, gradient__n_estimators=150 
+[CV]  gradient__learning_rate=0.01, gradient__loss=deviance, gradient__max_depth=5, gradient__max_features=None, gradient__n_estimators=150, f1_weighted=0.3826562765838085, precision_weighted=0.3828348339386219, recall_weighted=0.3877629063097514, accuracy=0.3877629063097514, total=18.4min
+[CV] gradient__learning_rate=0.1, gradient__loss=deviance, gradient__max_depth=3, gradient__max_features=None, gradient__n_estimators=150 
+[CV]  gradient__learning_rate=0.1, gradient__loss=deviance, gradient__max_depth=3, gradient__max_features=None, gradient__n_estimators=150, f1_weighted=0.3427088344971042, precision_weighted=0.34378859572687526, recall_weighted=0.34352311807413066, accuracy=0.34352311807413066, total=18.1min
+[CV] gradient__learning_rate=0.1, gradient__loss=deviance, gradient__max_depth=3, gradient__max_features=None, gradient__n_estimators=150 
+[CV]  gradient__learning_rate=0.1, gradient__loss=deviance, gradient__max_depth=3, gradient__max_features=None, gradient__n_estimators=150, f1_weighted=0.33561320354546864, precision_weighted=0.3487800224517629, recall_weighted=0.33855559801299195, accuracy=0.33855559801299195, total=18.0min
+[CV] gradient__learning_rate=0.1, gradient__loss=deviance, gradient__max_depth=3, gradient__max_features=None, gradient__n_estimators=150 
+[CV]  gradient__learning_rate=0.01, gradient__loss=deviance, gradient__max_depth=5, gradient__max_features=None, gradient__n_estimators=150, f1_weighted=0.40298020002088114, precision_weighted=0.4051000181524948, recall_weighted=0.4061185468451243, accuracy=0.4061185468451243, total=18.4min
+[CV] gradient__learning_rate=0.1, gradient__loss=deviance, gradient__max_depth=3, gradient__max_features=None, gradient__n_estimators=150 
+[CV]  gradient__learning_rate=0.1, gradient__loss=deviance, gradient__max_depth=3, gradient__max_features=None, gradient__n_estimators=150, f1_weighted=0.3534996572565229, precision_weighted=0.3527477139706691, recall_weighted=0.3551223241590214, accuracy=0.3551223241590214, total=18.1min
+[CV] gradient__learning_rate=0.1, gradient__loss=deviance, gradient__max_depth=3, gradient__max_features=None, gradient__n_estimators=150 
+[CV]  gradient__learning_rate=0.1, gradient__loss=deviance, gradient__max_depth=3, gradient__max_features=None, gradient__n_estimators=150, f1_weighted=0.4020455585800723, precision_weighted=0.4051858360366189, recall_weighted=0.4054260603744746, accuracy=0.4054260603744746, total=18.1min
+[CV] gradient__learning_rate=0.1, gradient__loss=deviance, gradient__max_depth=3, gradient__max_features=None, gradient__n_estimators=150 
+[CV]  gradient__learning_rate=0.01, gradient__loss=deviance, gradient__max_depth=5, gradient__max_features=None, gradient__n_estimators=150, f1_weighted=0.37483268822019833, precision_weighted=0.37997644525838786, recall_weighted=0.3781094527363184, accuracy=0.3781094527363184, total=18.4min
+[CV] gradient__learning_rate=0.1, gradient__loss=deviance, gradient__max_depth=3, gradient__max_features=None, gradient__n_estimators=150 
+[CV]  gradient__learning_rate=0.01, gradient__loss=deviance, gradient__max_depth=5, gradient__max_features=None, gradient__n_estimators=150, f1_weighted=0.38197773121870715, precision_weighted=0.385615914674298, recall_weighted=0.38461538461538464, accuracy=0.38461538461538464, total=18.5min
+[CV] gradient__learning_rate=0.1, gradient__loss=deviance, gradient__max_depth=5, gradient__max_features=None, gradient__n_estimators=150 
+[CV]  gradient__learning_rate=0.01, gradient__loss=deviance, gradient__max_depth=5, gradient__max_features=None, gradient__n_estimators=150, f1_weighted=0.38109028654808597, precision_weighted=0.3879182841169124, recall_weighted=0.3861461921163414, accuracy=0.3861461921163414, total=18.4min
+[CV] gradient__learning_rate=0.1, gradient__loss=deviance, gradient__max_depth=5, gradient__max_features=None, gradient__n_estimators=150 
+[CV]  gradient__learning_rate=0.1, gradient__loss=deviance, gradient__max_depth=3, gradient__max_features=None, gradient__n_estimators=150, f1_weighted=0.380540064962413, precision_weighted=0.38135771876185454, recall_weighted=0.3824091778202677, accuracy=0.3824091778202677, total=18.0min
+[CV] gradient__learning_rate=0.1, gradient__loss=deviance, gradient__max_depth=5, gradient__max_features=None, gradient__n_estimators=150 
+[CV]  gradient__learning_rate=0.1, gradient__loss=deviance, gradient__max_depth=3, gradient__max_features=None, gradient__n_estimators=150, f1_weighted=0.37791685201960895, precision_weighted=0.3787168359368952, recall_weighted=0.38279158699808796, accuracy=0.38279158699808796, total=18.0min
+[CV] gradient__learning_rate=0.1, gradient__loss=deviance, gradient__max_depth=5, gradient__max_features=None, gradient__n_estimators=150 
+[CV]  gradient__learning_rate=0.1, gradient__loss=deviance, gradient__max_depth=3, gradient__max_features=None, gradient__n_estimators=150, f1_weighted=0.4048783455432353, precision_weighted=0.4069357059867552, recall_weighted=0.40764818355640536, accuracy=0.40764818355640536, total=18.0min
+[CV] gradient__learning_rate=0.1, gradient__loss=deviance, gradient__max_depth=5, gradient__max_features=None, gradient__n_estimators=150 
+[CV]  gradient__learning_rate=0.1, gradient__loss=deviance, gradient__max_depth=3, gradient__max_features=None, gradient__n_estimators=150, f1_weighted=0.3765557915353333, precision_weighted=0.38189812773573045, recall_weighted=0.37964026023727515, accuracy=0.37964026023727515, total=18.0min
+[CV] gradient__learning_rate=0.1, gradient__loss=deviance, gradient__max_depth=5, gradient__max_features=None, gradient__n_estimators=150 
+[CV]  gradient__learning_rate=0.1, gradient__loss=deviance, gradient__max_depth=3, gradient__max_features=None, gradient__n_estimators=150, f1_weighted=0.38879586735613353, precision_weighted=0.3916213867204084, recall_weighted=0.39150401836969, accuracy=0.39150401836969, total=18.0min
+[CV] gradient__learning_rate=0.1, gradient__loss=deviance, gradient__max_depth=5, gradient__max_features=None, gradient__n_estimators=150 
+[CV]  gradient__learning_rate=0.1, gradient__loss=deviance, gradient__max_depth=5, gradient__max_features=None, gradient__n_estimators=150, f1_weighted=0.3509549635057204, precision_weighted=0.3526222309184142, recall_weighted=0.3515475735575086, accuracy=0.3515475735575086, total=18.4min
+[CV] gradient__learning_rate=0.1, gradient__loss=deviance, gradient__max_depth=5, gradient__max_features=None, gradient__n_estimators=150 
+[CV]  gradient__learning_rate=0.1, gradient__loss=deviance, gradient__max_depth=3, gradient__max_features=None, gradient__n_estimators=150, f1_weighted=0.3832687440563427, precision_weighted=0.3908899501438485, recall_weighted=0.38882510524301567, accuracy=0.38882510524301567, total=17.9min
+[CV] gradient__learning_rate=0.1, gradient__loss=deviance, gradient__max_depth=5, gradient__max_features=None, gradient__n_estimators=150 
+[CV]  gradient__learning_rate=0.1, gradient__loss=deviance, gradient__max_depth=5, gradient__max_features=None, gradient__n_estimators=150, f1_weighted=0.34224861911243704, precision_weighted=0.35551783768223677, recall_weighted=0.3442873519296905, accuracy=0.3442873519296905, total=18.3min
+[CV] gradient__learning_rate=0.1, gradient__loss=deviance, gradient__max_depth=5, gradient__max_features=None, gradient__n_estimators=150 
+[CV]  gradient__learning_rate=0.1, gradient__loss=deviance, gradient__max_depth=5, gradient__max_features=None, gradient__n_estimators=150, f1_weighted=0.4084480942646437, precision_weighted=0.41091023616721767, recall_weighted=0.4111578142911731, accuracy=0.4111578142911731, total=18.4min
+[CV] gradient__learning_rate=1, gradient__loss=deviance, gradient__max_depth=3, gradient__max_features=None, gradient__n_estimators=150 
+[CV]  gradient__learning_rate=0.1, gradient__loss=deviance, gradient__max_depth=5, gradient__max_features=None, gradient__n_estimators=150, f1_weighted=0.3536880088275215, precision_weighted=0.35283868893979803, recall_weighted=0.3558868501529052, accuracy=0.3558868501529052, total=18.4min
+[CV] gradient__learning_rate=1, gradient__loss=deviance, gradient__max_depth=3, gradient__max_features=None, gradient__n_estimators=150 
+[CV]  gradient__learning_rate=0.1, gradient__loss=deviance, gradient__max_depth=5, gradient__max_features=None, gradient__n_estimators=150, f1_weighted=0.3869469952845015, precision_weighted=0.38662581224511733, recall_weighted=0.3908221797323136, accuracy=0.3908221797323136, total=18.4min
+[CV] gradient__learning_rate=1, gradient__loss=deviance, gradient__max_depth=3, gradient__max_features=None, gradient__n_estimators=150 
+[CV]  gradient__learning_rate=0.1, gradient__loss=deviance, gradient__max_depth=5, gradient__max_features=None, gradient__n_estimators=150, f1_weighted=0.38064225388974154, precision_weighted=0.38081672070923167, recall_weighted=0.38317399617590825, accuracy=0.38317399617590825, total=18.4min
+[CV] gradient__learning_rate=1, gradient__loss=deviance, gradient__max_depth=3, gradient__max_features=None, gradient__n_estimators=150 
+[CV]  gradient__learning_rate=0.1, gradient__loss=deviance, gradient__max_depth=5, gradient__max_features=None, gradient__n_estimators=150, f1_weighted=0.4158644305213882, precision_weighted=0.41701752099146755, recall_weighted=0.4191204588910134, accuracy=0.4191204588910134, total=18.3min
+[CV] gradient__learning_rate=1, gradient__loss=deviance, gradient__max_depth=3, gradient__max_features=None, gradient__n_estimators=150 
+[CV]  gradient__learning_rate=0.1, gradient__loss=deviance, gradient__max_depth=5, gradient__max_features=None, gradient__n_estimators=150, f1_weighted=0.37410025317692813, precision_weighted=0.37945262798518853, recall_weighted=0.37734404898584, accuracy=0.37734404898584, total=18.3min
+[CV] gradient__learning_rate=1, gradient__loss=deviance, gradient__max_depth=3, gradient__max_features=None, gradient__n_estimators=150 
+[CV]  gradient__learning_rate=0.1, gradient__loss=deviance, gradient__max_depth=5, gradient__max_features=None, gradient__n_estimators=150, f1_weighted=0.395411134472425, precision_weighted=0.3984382954050128, recall_weighted=0.3983926521239954, accuracy=0.3983926521239954, total=18.3min
+[CV] gradient__learning_rate=1, gradient__loss=deviance, gradient__max_depth=3, gradient__max_features=None, gradient__n_estimators=150 
+[CV]  gradient__learning_rate=0.1, gradient__loss=deviance, gradient__max_depth=5, gradient__max_features=None, gradient__n_estimators=150, f1_weighted=0.38310708022424883, precision_weighted=0.3909650252919157, recall_weighted=0.39035591274397247, accuracy=0.39035591274397247, total=18.3min
+[CV] gradient__learning_rate=1, gradient__loss=deviance, gradient__max_depth=3, gradient__max_features=None, gradient__n_estimators=150 
+[CV]  gradient__learning_rate=1, gradient__loss=deviance, gradient__max_depth=3, gradient__max_features=None, gradient__n_estimators=150, f1_weighted=0.3553474473701674, precision_weighted=0.35772346619855816, recall_weighted=0.3546045089797478, accuracy=0.3546045089797478, total=18.0min
+[CV] gradient__learning_rate=1, gradient__loss=deviance, gradient__max_depth=3, gradient__max_features=None, gradient__n_estimators=150 
+[CV]  gradient__learning_rate=1, gradient__loss=deviance, gradient__max_depth=3, gradient__max_features=None, gradient__n_estimators=150, f1_weighted=0.3414143540594597, precision_weighted=0.3511354268533243, recall_weighted=0.3412304165074513, accuracy=0.3412304165074513, total=17.9min
+[CV] gradient__learning_rate=1, gradient__loss=deviance, gradient__max_depth=3, gradient__max_features=None, gradient__n_estimators=150 
+[CV]  gradient__learning_rate=1, gradient__loss=deviance, gradient__max_depth=3, gradient__max_features=None, gradient__n_estimators=150, f1_weighted=0.33946613752051574, precision_weighted=0.3389712375350243, recall_weighted=0.34059633027522934, accuracy=0.34059633027522934, total=18.1min
+[CV]  gradient__learning_rate=1, gradient__loss=deviance, gradient__max_depth=3, gradient__max_features=None, gradient__n_estimators=150, f1_weighted=0.4045711934798003, precision_weighted=0.40513276557662986, recall_weighted=0.4065724111578143, accuracy=0.4065724111578143, total=18.1min
+[CV] gradient__learning_rate=1, gradient__loss=deviance, gradient__max_depth=5, gradient__max_features=None, gradient__n_estimators=150 
+[CV] gradient__learning_rate=1, gradient__loss=deviance, gradient__max_depth=5, gradient__max_features=None, gradient__n_estimators=150 
+[CV]  gradient__learning_rate=1, gradient__loss=deviance, gradient__max_depth=3, gradient__max_features=None, gradient__n_estimators=150, f1_weighted=0.3719234289844832, precision_weighted=0.37148051472557786, recall_weighted=0.372848948374761, accuracy=0.372848948374761, total=18.0min
+[CV] gradient__learning_rate=1, gradient__loss=deviance, gradient__max_depth=5, gradient__max_features=None, gradient__n_estimators=150 
+[CV]  gradient__learning_rate=1, gradient__loss=deviance, gradient__max_depth=3, gradient__max_features=None, gradient__n_estimators=150, f1_weighted=0.403220841777569, precision_weighted=0.4032247975921248, recall_weighted=0.4061185468451243, accuracy=0.4061185468451243, total=18.0min
+[CV] gradient__learning_rate=1, gradient__loss=deviance, gradient__max_depth=5, gradient__max_features=None, gradient__n_estimators=150 
+[CV]  gradient__learning_rate=1, gradient__loss=deviance, gradient__max_depth=3, gradient__max_features=None, gradient__n_estimators=150, f1_weighted=0.40882890715345016, precision_weighted=0.4103905950023421, recall_weighted=0.4107074569789675, accuracy=0.4107074569789675, total=18.0min
+[CV] gradient__learning_rate=1, gradient__loss=deviance, gradient__max_depth=5, gradient__max_features=None, gradient__n_estimators=150 
+[CV]  gradient__learning_rate=1, gradient__loss=deviance, gradient__max_depth=3, gradient__max_features=None, gradient__n_estimators=150, f1_weighted=0.3854844341165446, precision_weighted=0.3888239551253267, recall_weighted=0.3869115958668197, accuracy=0.3869115958668197, total=17.9min
+[CV] gradient__learning_rate=1, gradient__loss=deviance, gradient__max_depth=5, gradient__max_features=None, gradient__n_estimators=150 
+[CV]  gradient__learning_rate=1, gradient__loss=deviance, gradient__max_depth=3, gradient__max_features=None, gradient__n_estimators=150, f1_weighted=0.40158325953989826, precision_weighted=0.4032832146176046, recall_weighted=0.4041331802525832, accuracy=0.4041331802525832, total=18.3min
+[CV] gradient__learning_rate=1, gradient__loss=deviance, gradient__max_depth=5, gradient__max_features=None, gradient__n_estimators=150 
+[CV]  gradient__learning_rate=1, gradient__loss=deviance, gradient__max_depth=3, gradient__max_features=None, gradient__n_estimators=150, f1_weighted=0.38689456099260794, precision_weighted=0.3929365010394109, recall_weighted=0.39303482587064675, accuracy=0.39303482587064675, total=18.3min
+[CV] gradient__learning_rate=1, gradient__loss=deviance, gradient__max_depth=5, gradient__max_features=None, gradient__n_estimators=150 
+[CV]  gradient__learning_rate=1, gradient__loss=deviance, gradient__max_depth=5, gradient__max_features=None, gradient__n_estimators=150, f1_weighted=0.35308296180872684, precision_weighted=0.3575918488908617, recall_weighted=0.3519296904852885, accuracy=0.3519296904852885, total=18.9min
+[CV] gradient__learning_rate=1, gradient__loss=deviance, gradient__max_depth=5, gradient__max_features=None, gradient__n_estimators=150 
+[CV]  gradient__learning_rate=1, gradient__loss=deviance, gradient__max_depth=5, gradient__max_features=None, gradient__n_estimators=150, f1_weighted=0.3372021100665997, precision_weighted=0.3470106637061561, recall_weighted=0.33702713030187237, accuracy=0.33702713030187237, total=18.8min
+[CV] gradient__learning_rate=1, gradient__loss=deviance, gradient__max_depth=5, gradient__max_features=None, gradient__n_estimators=150 
+[CV]  gradient__learning_rate=1, gradient__loss=deviance, gradient__max_depth=5, gradient__max_features=None, gradient__n_estimators=150, f1_weighted=0.4011879355106416, precision_weighted=0.4011153330272908, recall_weighted=0.4016048910966756, accuracy=0.4016048910966756, total=18.9min
+[CV]  gradient__learning_rate=1, gradient__loss=deviance, gradient__max_depth=5, gradient__max_features=None, gradient__n_estimators=150, f1_weighted=0.3308045807516185, precision_weighted=0.331178953446623, recall_weighted=0.33065749235474007, accuracy=0.33065749235474007, total=19.1min
+[CV]  gradient__learning_rate=1, gradient__loss=deviance, gradient__max_depth=5, gradient__max_features=None, gradient__n_estimators=150, f1_weighted=0.37035124847861056, precision_weighted=0.3704010249367513, recall_weighted=0.3705544933078394, accuracy=0.3705544933078394, total=18.9min
+[CV]  gradient__learning_rate=1, gradient__loss=deviance, gradient__max_depth=5, gradient__max_features=None, gradient__n_estimators=150, f1_weighted=0.39551236739918455, precision_weighted=0.39517074364020766, recall_weighted=0.39808795411089865, accuracy=0.39808795411089865, total=19.0min
+[CV]  gradient__learning_rate=1, gradient__loss=deviance, gradient__max_depth=5, gradient__max_features=None, gradient__n_estimators=150, f1_weighted=0.4131729899289594, precision_weighted=0.4131269954149455, recall_weighted=0.4149139579349904, accuracy=0.4149139579349904, total=11.8min
+[CV]  gradient__learning_rate=1, gradient__loss=deviance, gradient__max_depth=5, gradient__max_features=None, gradient__n_estimators=150, f1_weighted=0.38119431559708095, precision_weighted=0.38249579328351285, recall_weighted=0.38308457711442784, accuracy=0.38308457711442784, total=11.7min
+[Parallel(n_jobs=-1)]: Done  58 out of  60 | elapsed: 337.2min remaining: 11.6min
+[CV]  gradient__learning_rate=1, gradient__loss=deviance, gradient__max_depth=5, gradient__max_features=None, gradient__n_estimators=150, f1_weighted=0.39899577312631596, precision_weighted=0.4001278274497968, recall_weighted=0.4010715652506697, accuracy=0.4010715652506697, total=11.4min
+[CV]  gradient__learning_rate=1, gradient__loss=deviance, gradient__max_depth=5, gradient__max_features=None, gradient__n_estimators=150, f1_weighted=0.3852208846510877, precision_weighted=0.3887390946864111, recall_weighted=0.3880597014925373, accuracy=0.3880597014925373, total=11.3min
+[Parallel(n_jobs=-1)]: Done  60 out of  60 | elapsed: 337.4min finished
+Fitting 10 folds for each of 1 candidates, totalling 10 fits
+[CV]  ................................................................
+[CV]  ................................................................
+[CV]  , f1_weighted=0.2612671915692428, precision_weighted=0.2695826378073547, recall_weighted=0.24799388612915552, accuracy=0.2487581199847153, total=   0.1s
+[CV]  ................................................................
+[CV]  , f1_weighted=0.2685600915309315, precision_weighted=0.2600525820041838, recall_weighted=0.24531906763469621, accuracy=0.26289644631257164, total=   0.1s
+[CV]  ................................................................
+[CV]  , f1_weighted=0.2738838868275838, precision_weighted=0.24861879121914962, recall_weighted=0.27206725257928926, accuracy=0.25143293847917464, total=   0.1s
+[CV]  ................................................................
+[CV]  , f1_weighted=0.2629753798563251, precision_weighted=0.2652540494117948, recall_weighted=0.25649847094801226, accuracy=0.24464831804281345, total=   0.1s
+[Parallel(n_jobs=-1)]: Done   4 out of  10 | elapsed:    1.5s remaining:    2.3s
+[CV]  ................................................................
+[CV]  , f1_weighted=0.26038514960009884, precision_weighted=0.25083859976054157, recall_weighted=0.26233269598470366, accuracy=0.2435946462715105, total=   0.1s
+[CV]  ................................................................
+[CV]  , f1_weighted=0.2602415540028076, precision_weighted=0.25703576451964527, recall_weighted=0.25277246653919694, accuracy=0.26347992351816446, total=   0.1s
+[CV]  ................................................................
+[CV]  , f1_weighted=0.2768458786789983, precision_weighted=0.2477323914242733, recall_weighted=0.25659655831739964, accuracy=0.25391969407265774, total=   0.1s
+[Parallel(n_jobs=-1)]: Done   7 out of  10 | elapsed:    2.2s remaining:    0.9s
+[CV]  ................................................................
+[CV]  , f1_weighted=0.2738734825963409, precision_weighted=0.26229635346979135, recall_weighted=0.25487944890929964, accuracy=0.2663605051664753, total=   0.1s
+[CV]  ................................................................
+[CV]  , f1_weighted=0.2418978799472744, precision_weighted=0.2722631709754317, recall_weighted=0.2736318407960199, accuracy=0.23268274014542673, total=   0.1s
+[CV]  , f1_weighted=0.25795026160981016, precision_weighted=0.26313350124381435, recall_weighted=0.2564102564102564, accuracy=0.24454649827784156, total=   0.1s
+[Parallel(n_jobs=-1)]: Done  10 out of  10 | elapsed:    2.9s remaining:    0.0s
+[Parallel(n_jobs=-1)]: Done  10 out of  10 | elapsed:    2.9s finished
+Done train_full_data_set

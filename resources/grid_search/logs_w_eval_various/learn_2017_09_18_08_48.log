@@ -1,0 +1,87 @@
+price                           float64
+starRating                      float64
+category                         object
+totalNrOfReviews                float64
+installs                         object
+contentRating                    object
+appUrl                           object
+libraries                       float64
+bigCompany                      float64
+daysSinceLastUpdated            float64
+text                             object
+1starReviews                    float64
+2starReviews                    float64
+3starReviews                    float64
+4starReviews                    float64
+5starReviews                    float64
+requiredAndroidVersion_major    float64
+requiredAndroidVersion_minor    float64
+similarAppsAvgPrice             float64
+dtype: object
+(25927, 19) transformed data
+2 features dropped
+(25927, 16) X_all
+(19445, 16) X_train
+(6482, 16) X_eval
+
+y_train value counts:
+2.0    5417
+1.0    5389
+3.0    4721
+4.0    3918
+Name: price, dtype: int64
+
+y_eval value counts:
+2.0    1855
+1.0    1805
+3.0    1558
+4.0    1264
+Name: price, dtype: int64
+Fitting 3 folds for each of 10 candidates, totalling 30 fits
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sklearn/externals/joblib/parallel.py", line 699, in retrieve
+    self._output.extend(job.get(timeout=self.timeout))
+  File "/usr/local/Cellar/python3/3.6.1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/pool.py", line 602, in get
+    self.wait(timeout)
+  File "/usr/local/Cellar/python3/3.6.1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/pool.py", line 599, in wait
+    self._event.wait(timeout)
+  File "/usr/local/Cellar/python3/3.6.1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/threading.py", line 551, in wait
+    signaled = self._cond.wait(timeout)
+  File "/usr/local/Cellar/python3/3.6.1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/threading.py", line 295, in wait
+    waiter.acquire()
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/simon/Documents/code/nodejs/master-project/mp_data_analysis/analysis/learn.py", line 268, in <module>
+    main()
+  File "/Users/simon/Documents/code/nodejs/master-project/mp_data_analysis/analysis/learn.py", line 127, in main
+    search.fit(X_train, y_train)
+  File "/usr/local/lib/python3.6/site-packages/sklearn/model_selection/_search.py", line 638, in fit
+    cv.split(X, y, groups)))
+  File "/usr/local/lib/python3.6/site-packages/sklearn/externals/joblib/parallel.py", line 789, in __call__
+    self.retrieve()
+  File "/usr/local/lib/python3.6/site-packages/sklearn/externals/joblib/parallel.py", line 721, in retrieve
+    backend.abort_everything(ensure_ready=ensure_ready)
+  File "/usr/local/lib/python3.6/site-packages/sklearn/externals/joblib/_parallel_backends.py", line 145, in abort_everything
+    self.terminate()
+  File "/usr/local/lib/python3.6/site-packages/sklearn/externals/joblib/_parallel_backends.py", line 323, in terminate
+    super(MultiprocessingBackend, self).terminate()
+  File "/usr/local/lib/python3.6/site-packages/sklearn/externals/joblib/_parallel_backends.py", line 136, in terminate
+    self._pool.terminate()  # terminate does a join()
+  File "/usr/local/lib/python3.6/site-packages/sklearn/externals/joblib/pool.py", line 606, in terminate
+    super(MemmapingPool, self).terminate()
+  File "/usr/local/Cellar/python3/3.6.1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/pool.py", line 505, in terminate
+    self._terminate()
+  File "/usr/local/Cellar/python3/3.6.1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/util.py", line 186, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+  File "/usr/local/Cellar/python3/3.6.1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/pool.py", line 569, in _terminate_pool
+    p.join()
+  File "/usr/local/Cellar/python3/3.6.1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/process.py", line 121, in join
+    res = self._popen.wait(timeout)
+  File "/usr/local/Cellar/python3/3.6.1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/popen_fork.py", line 51, in wait
+    return self.poll(os.WNOHANG if timeout == 0.0 else 0)
+  File "/usr/local/Cellar/python3/3.6.1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/popen_fork.py", line 29, in poll
+    pid, sts = os.waitpid(self.pid, flag)
+KeyboardInterrupt

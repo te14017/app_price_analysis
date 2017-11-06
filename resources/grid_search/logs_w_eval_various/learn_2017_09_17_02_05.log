@@ -1,0 +1,99 @@
+price                           float64
+starRating                      float64
+category                         object
+totalNrOfReviews                float64
+installs                         object
+contentRating                    object
+appUrl                           object
+libraries                       float64
+bigCompany                      float64
+daysSinceLastUpdated            float64
+text                             object
+1starReviews                    float64
+2starReviews                    float64
+3starReviews                    float64
+4starReviews                    float64
+5starReviews                    float64
+requiredAndroidVersion_major    float64
+requiredAndroidVersion_minor    float64
+similarAppsAvgPrice             float64
+dtype: object
+(25927, 19) transformed data
+2 features dropped
+(25927, 16) X_all
+(19445, 16) X_train
+(6482, 16) X_eval
+
+y_train value counts:
+2.0    5403
+1.0    5395
+3.0    4726
+4.0    3921
+Name: price, dtype: int64
+
+y_eval value counts:
+2.0    1869
+1.0    1799
+3.0    1553
+4.0    1261
+Name: price, dtype: int64
+Fitting 3 folds for each of 10 candidates, totalling 30 fits
+
+
+score_precision_eval_mean=0.562 (+/- 0.102)
+score_recall_eval_mean=0.501 (+/- 0.153)
+score_f1_eval_mean=0.505 (+/- 0.0436)
+score_accuracy_eval=0.513
+Fitting 3 folds for each of 10 candidates, totalling 30 fits
+[Parallel(n_jobs=-1)]: Done   9 tasks      | elapsed:   34.4s
+[Parallel(n_jobs=-1)]: Done  23 out of  30 | elapsed:  1.3min remaining:   23.9s
+[Parallel(n_jobs=-1)]: Done  30 out of  30 | elapsed:  1.5min finished
+[CV] gradient__n_estimators=1200, gradient__max_features=None, gradient__max_depth=11, gradient__loss=deviance, gradient__learning_rate=0.1 
+[CV]  gradient__n_estimators=1200, gradient__max_features=None, gradient__max_depth=11, gradient__loss=deviance, gradient__learning_rate=0.1, score=0.22557075792686043, total= 8.5min
+[CV] gradient__n_estimators=600, gradient__max_features=sqrt, gradient__max_depth=25, gradient__loss=deviance, gradient__learning_rate=1.2 
+[CV]  gradient__n_estimators=600, gradient__max_features=sqrt, gradient__max_depth=25, gradient__loss=deviance, gradient__learning_rate=1.2, score=0.16927375111424459, total= 1.0min
+[CV] gradient__n_estimators=400, gradient__max_features=None, gradient__max_depth=5, gradient__loss=deviance, gradient__learning_rate=100 
+[CV]  gradient__n_estimators=400, gradient__max_features=None, gradient__max_depth=5, gradient__loss=deviance, gradient__learning_rate=100, score=0.02032935783063361, total= 1.0min
+[CV] gradient__n_estimators=400, gradient__max_features=None, gradient__max_depth=5, gradient__loss=deviance, gradient__learning_rate=100 
+[CV]  gradient__n_estimators=400, gradient__max_features=None, gradient__max_depth=5, gradient__loss=deviance, gradient__learning_rate=100, score=0.0015678473266862447, total=  59.1s
+[CV] gradient__n_estimators=400, gradient__max_features=sqrt, gradient__max_depth=7, gradient__loss=deviance, gradient__learning_rate=100 
+[CV]  gradient__n_estimators=400, gradient__max_features=sqrt, gradient__max_depth=7, gradient__loss=deviance, gradient__learning_rate=100, score=-0.017910500828044684, total=  41.7s
+[CV] gradient__n_estimators=400, gradient__max_features=sqrt, gradient__max_depth=7, gradient__loss=deviance, gradient__learning_rate=100 
+[CV]  gradient__n_estimators=400, gradient__max_features=sqrt, gradient__max_depth=7, gradient__loss=deviance, gradient__learning_rate=100, score=0.0029814673302234196, total=  42.4s
+[CV] gradient__n_estimators=400, gradient__max_features=None, gradient__max_depth=5, gradient__loss=deviance, gradient__learning_rate=0.1 
+[CV]  gradient__n_estimators=400, gradient__max_features=None, gradient__max_depth=5, gradient__loss=deviance, gradient__learning_rate=0.1, score=0.2196901341412859, total=  50.3s
+[CV] gradient__n_estimators=1200, gradient__max_features=None, gradient__max_depth=11, gradient__loss=deviance, gradient__learning_rate=0.1 
+[CV]  gradient__n_estimators=1200, gradient__max_features=None, gradient__max_depth=11, gradient__loss=deviance, gradient__learning_rate=0.1, score=0.21758615529858394, total= 8.5min
+[CV] gradient__n_estimators=600, gradient__max_features=sqrt, gradient__max_depth=25, gradient__loss=deviance, gradient__learning_rate=1.2 
+[CV]  gradient__n_estimators=600, gradient__max_features=sqrt, gradient__max_depth=25, gradient__loss=deviance, gradient__learning_rate=1.2, score=0.1751444907686187, total= 1.0min
+[CV] gradient__n_estimators=600, gradient__max_features=sqrt, gradient__max_depth=25, gradient__loss=deviance, gradient__learning_rate=1.2 
+[CV]  gradient__n_estimators=600, gradient__max_features=sqrt, gradient__max_depth=25, gradient__loss=deviance, gradient__learning_rate=1.2, score=0.170684996805611, total= 1.1min
+[CV] gradient__n_estimators=400, gradient__max_features=None, gradient__max_depth=5, gradient__loss=deviance, gradient__learning_rate=100 
+[CV]  gradient__n_estimators=400, gradient__max_features=None, gradient__max_depth=5, gradient__loss=deviance, gradient__learning_rate=100, score=-0.007702861336079891, total=  59.5s
+[CV] gradient__n_estimators=400, gradient__max_features=sqrt, gradient__max_depth=7, gradient__loss=deviance, gradient__learning_rate=100 
+[CV]  gradient__n_estimators=400, gradient__max_features=sqrt, gradient__max_depth=7, gradient__loss=deviance, gradient__learning_rate=100, score=0.010069717771491238, total=  42.2s
+[CV] gradient__n_estimators=400, gradient__max_features=None, gradient__max_depth=5, gradient__loss=deviance, gradient__learning_rate=0.1 
+[CV]  gradient__n_estimators=400, gradient__max_features=None, gradient__max_depth=5, gradient__loss=deviance, gradient__learning_rate=0.1, score=0.20889743923837134, total=  50.1s
+[CV] gradient__n_estimators=400, gradient__max_features=None, gradient__max_depth=5, gradient__loss=deviance, gradient__learning_rate=0.1 
+[CV]  gradient__n_estimators=400, gradient__max_features=None, gradient__max_depth=5, gradient__loss=deviance, gradient__learning_rate=0.1, score=0.2116460054114977, total=  50.0s
+
+
+score_precision_eval_mean=0.43 (+/- 0.0215)
+score_recall_eval_mean=0.428 (+/- 0.0393)
+score_f1_eval_mean=0.429 (+/- 0.0287)
+score_accuracy_eval=0.43
+Fitting 3 folds for each of 10 candidates, totalling 30 fits
+[Parallel(n_jobs=-1)]: Done   9 tasks      | elapsed:  5.9min
+[Parallel(n_jobs=-1)]: Done  23 out of  30 | elapsed: 14.0min remaining:  4.3min
+[Parallel(n_jobs=-1)]: Done  30 out of  30 | elapsed: 29.3min finished
+[Parallel(n_jobs=-1)]: Done   9 tasks      | elapsed: 17.4min
+[Parallel(n_jobs=-1)]: Done  23 out of  30 | elapsed: 33.5min remaining: 10.2min
+[Parallel(n_jobs=-1)]: Done  30 out of  30 | elapsed: 43.6min finished
+/usr/local/lib/python3.6/site-packages/sklearn/svm/base.py:218: ConvergenceWarning: Solver terminated early (max_iter=10000).  Consider pre-processing your data with StandardScaler or MinMaxScaler.
+  % self.max_iter, ConvergenceWarning)
+
+
+score_precision_eval_mean=0.529 (+/- 0.0436)
+score_recall_eval_mean=0.532 (+/- 0.0458)
+score_f1_eval_mean=0.53 (+/- 0.0424)
+score_accuracy_eval=0.526

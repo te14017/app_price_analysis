@@ -1,0 +1,28 @@
+
+SGDRegressor: 
+explained_variance_score of SGDRegressor (for all categories): 0.0
+
+Sample prediction result and target: 
+[[ -1.82154865e+16  -1.21481768e+16  -2.75589421e+17 ...,   2.28312898e+11
+   -2.03755405e+12  -1.77797801e+12]
+ [  2.49000000e+00   2.99000000e+00   1.00000000e+00 ...,   7.80000000e+00
+    5.63000000e+00   6.48000000e+00]]
+KNeighborsRegressor: 
+explained_variance_score of KNeighborsRegressor (for all categories): -8.26097613697
+
+Sample prediction result and target: 
+[[ 2.691  2.242  2.191 ...,  0.99   1.488  2.69 ]
+ [ 2.49   2.99   1.    ...,  7.8    5.63   6.48 ]]
+DecisionTreeRegressor: 
+explained_variance_score of DecisionTreeRegressor (for all categories): -0.875442608405
+
+Sample prediction result and target: 
+[[ 4.99  1.99  2.99 ...,  0.99  0.99  7.49]
+ [ 2.49  2.99  1.   ...,  7.8   5.63  6.48]]
+MLPRegressor: 
+explained_variance_score of MLPRegressor (for all categories): -2.05694498913
+
+Sample prediction result and target: 
+[[ 1.24087905  2.07099469  4.61128526 ...,  1.81652691  2.07938745
+   2.48836494]
+ [ 2.49        2.99        1.         ...,  7.8         5.63        6.48      ]]

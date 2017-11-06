@@ -1,0 +1,24 @@
+
+the best model is: MLPClassifier
+the best score is: 0.529482823707
+the accuracy on test data is: 0.54770531401
+
+             precision    recall  f1-score   support
+
+          1       0.54      0.54      0.54       914
+          2       0.53      0.39      0.45       919
+          3       0.54      0.16      0.24       295
+          4       0.56      0.77      0.65      1184
+
+avg / total       0.54      0.55      0.53      3312
+
+==========================================
+the best parameters are as follow: 
+model: MLPClassifier(activation='relu', alpha=0.0001, batch_size='auto', beta_1=0.9,
+       beta_2=0.999, early_stopping=False, epsilon=1e-08,
+       hidden_layer_sizes=(10, 10, 10), learning_rate='constant',
+       learning_rate_init=0.001, max_iter=200, momentum=0.9,
+       nesterovs_momentum=True, power_t=0.5, random_state=23, shuffle=True,
+       solver='adam', tol=0.0001, validation_fraction=0.1, verbose=False,
+       warm_start=False)
+model__hidden_layer_sizes: (10, 10, 10)

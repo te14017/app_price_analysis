@@ -1,0 +1,1035 @@
+price                           float64
+starRating                      float64
+category                         object
+totalNrOfReviews                float64
+installs                         object
+contentRating                    object
+appUrl                           object
+libraries                       float64
+bigCompany                      float64
+daysSinceLastUpdated            float64
+text                             object
+1starReviews                    float64
+2starReviews                    float64
+3starReviews                    float64
+4starReviews                    float64
+5starReviews                    float64
+requiredAndroidVersion_major    float64
+requiredAndroidVersion_minor    float64
+similarAppsAvgPrice             float64
+dtype: object
+(25927, 19) transformed data
+2 features dropped
+(25927, 16) X_all
+(19445, 16) X_train
+(6482, 16) X_eval
+
+y_train value counts:
+2.0    5468
+1.0    5420
+4.0    4861
+3.0    3696
+Name: price, dtype: int64
+
+y_eval value counts:
+2.0    1804
+1.0    1774
+4.0    1661
+3.0    1243
+Name: price, dtype: int64
+Fitting 3 folds for each of 10 candidates, totalling 30 fits
+
+
+score_precision_eval_mean=0.488 (+/- 0.065)
+score_recall_eval_mean=0.483 (+/- 0.117)
+score_f1_eval_mean=0.481 (+/- 0.0831)
+score_accuracy_eval=0.493
+Fitting 3 folds for each of 10 candidates, totalling 30 fits
+[Parallel(n_jobs=-1)]: Done   9 tasks      | elapsed:   33.6s
+[Parallel(n_jobs=-1)]: Done  23 out of  30 | elapsed:  1.3min remaining:   23.2s
+[Parallel(n_jobs=-1)]: Done  30 out of  30 | elapsed:  1.6min finished
+multiprocessing.pool.RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sklearn/externals/joblib/_parallel_backends.py", line 350, in __call__
+    return self.func(*args, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/sklearn/externals/joblib/parallel.py", line 131, in __call__
+    return [func(*args, **kwargs) for func, args, kwargs in self.items]
+  File "/usr/local/lib/python3.6/site-packages/sklearn/externals/joblib/parallel.py", line 131, in <listcomp>
+    return [func(*args, **kwargs) for func, args, kwargs in self.items]
+  File "/usr/local/lib/python3.6/site-packages/sklearn/model_selection/_validation.py", line 467, in _fit_and_score
+    test_scores = _score(estimator, X_test, y_test, scorer, is_multimetric)
+  File "/usr/local/lib/python3.6/site-packages/sklearn/model_selection/_validation.py", line 502, in _score
+    return _multimetric_score(estimator, X_test, y_test, scorer)
+  File "/usr/local/lib/python3.6/site-packages/sklearn/model_selection/_validation.py", line 532, in _multimetric_score
+    score = scorer(estimator, X_test, y_test)
+  File "/usr/local/lib/python3.6/site-packages/sklearn/metrics/scorer.py", line 101, in __call__
+    y_pred = estimator.predict(X)
+  File "/usr/local/lib/python3.6/site-packages/sklearn/utils/metaestimators.py", line 115, in <lambda>
+    out = lambda *args, **kwargs: self.fn(obj, *args, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/sklearn/pipeline.py", line 315, in predict
+    Xt = transform.transform(Xt)
+  File "/usr/local/lib/python3.6/site-packages/sklearn_pandas/dataframe_mapper.py", line 260, in transform
+    Xt = transformers.transform(Xt)
+  File "/usr/local/lib/python3.6/site-packages/sklearn/pipeline.py", line 434, in _transform
+    Xt = transform.transform(Xt)
+  File "/usr/local/lib/python3.6/site-packages/sklearn/preprocessing/label.py", line 133, in transform
+    raise ValueError("y contains new labels: %s" % str(diff))
+ValueError: y contains new labels: ['BEAUTY']
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/Cellar/python3/3.6.1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/pool.py", line 119, in worker
+    result = (True, func(*args, **kwds))
+  File "/usr/local/lib/python3.6/site-packages/sklearn/externals/joblib/_parallel_backends.py", line 359, in __call__
+    raise TransportableException(text, e_type)
+sklearn.externals.joblib.my_exceptions.TransportableException: TransportableException
+___________________________________________________________________________
+ValueError                                         Mon Sep 18 01:19:37 2017
+PID: 61118               Python 3.6.1: /usr/local/opt/python3/bin/python3.6
+...........................................................................
+/usr/local/lib/python3.6/site-packages/sklearn/externals/joblib/parallel.py in __call__(self=<sklearn.externals.joblib.parallel.BatchedCalls object>)
+    126     def __init__(self, iterator_slice):
+    127         self.items = list(iterator_slice)
+    128         self._size = len(self.items)
+    129 
+    130     def __call__(self):
+--> 131         return [func(*args, **kwargs) for func, args, kwargs in self.items]
+        self.items = [(<function _fit_and_score>, (Pipeline(memory=None,
+     steps=[('drop_text', ....0, verbose=0,
+              warm_start=False))]),        starRating                 category  tota...                 3.0  
+
+[19445 rows x 16 columns], 10873    4.0
+451      1.0
+1754     1.0
+6564     ...8    1.0
+8017     1.0
+Name: price, dtype: float64, {'score': make_scorer(cohen_kappa_score)}, array([ 6420,  6421,  6424, ..., 19442, 19443, 19444]), array([   0,    1,    2, ..., 6571, 6574, 6576]), 4, {'gradient__learning_rate': 1000, 'gradient__loss': 'deviance', 'gradient__max_depth': 11, 'gradient__max_features': 'sqrt', 'gradient__n_estimators': 400}), {'error_score': nan, 'fit_params': {}, 'return_n_test_samples': True, 'return_parameters': False, 'return_times': True, 'return_train_score': True})]
+    132 
+    133     def __len__(self):
+    134         return self._size
+    135 
+
+...........................................................................
+/usr/local/lib/python3.6/site-packages/sklearn/externals/joblib/parallel.py in <listcomp>(.0=<list_iterator object>)
+    126     def __init__(self, iterator_slice):
+    127         self.items = list(iterator_slice)
+    128         self._size = len(self.items)
+    129 
+    130     def __call__(self):
+--> 131         return [func(*args, **kwargs) for func, args, kwargs in self.items]
+        func = <function _fit_and_score>
+        args = (Pipeline(memory=None,
+     steps=[('drop_text', ....0, verbose=0,
+              warm_start=False))]),        starRating                 category  tota...                 3.0  
+
+[19445 rows x 16 columns], 10873    4.0
+451      1.0
+1754     1.0
+6564     ...8    1.0
+8017     1.0
+Name: price, dtype: float64, {'score': make_scorer(cohen_kappa_score)}, array([ 6420,  6421,  6424, ..., 19442, 19443, 19444]), array([   0,    1,    2, ..., 6571, 6574, 6576]), 4, {'gradient__learning_rate': 1000, 'gradient__loss': 'deviance', 'gradient__max_depth': 11, 'gradient__max_features': 'sqrt', 'gradient__n_estimators': 400})
+        kwargs = {'error_score': nan, 'fit_params': {}, 'return_n_test_samples': True, 'return_parameters': False, 'return_times': True, 'return_train_score': True}
+    132 
+    133     def __len__(self):
+    134         return self._size
+    135 
+
+...........................................................................
+/usr/local/lib/python3.6/site-packages/sklearn/model_selection/_validation.py in _fit_and_score(estimator=Pipeline(memory=None,
+     steps=[('drop_text', ....0, verbose=0,
+              warm_start=False))]), X=       starRating                 category  tota...                 3.0  
+
+[19445 rows x 16 columns], y=10873    4.0
+451      1.0
+1754     1.0
+6564     ...8    1.0
+8017     1.0
+Name: price, dtype: float64, scorer={'score': make_scorer(cohen_kappa_score)}, train=array([ 6420,  6421,  6424, ..., 19442, 19443, 19444]), test=array([   0,    1,    2, ..., 6571, 6574, 6576]), verbose=4, parameters={'gradient__learning_rate': 1000, 'gradient__loss': 'deviance', 'gradient__max_depth': 11, 'gradient__max_features': 'sqrt', 'gradient__n_estimators': 400}, fit_params={}, return_train_score=True, return_parameters=False, return_n_test_samples=True, return_times=True, error_score=nan)
+    462                              " make sure that it has been spelled correctly.)")
+    463 
+    464     else:
+    465         fit_time = time.time() - start_time
+    466         # _score will return dict if is_multimetric is True
+--> 467         test_scores = _score(estimator, X_test, y_test, scorer, is_multimetric)
+        test_scores = {}
+        estimator = Pipeline(memory=None,
+     steps=[('drop_text', ....0, verbose=0,
+              warm_start=False))])
+        X_test =        starRating                 category  tota...                  0.0  
+
+[6483 rows x 16 columns]
+        y_test = 10873    4.0
+451      1.0
+1754     1.0
+6564     ...2    4.0
+8957     4.0
+Name: price, dtype: float64
+        scorer = {'score': make_scorer(cohen_kappa_score)}
+        is_multimetric = True
+    468         score_time = time.time() - start_time - fit_time
+    469         if return_train_score:
+    470             train_scores = _score(estimator, X_train, y_train, scorer,
+    471                                   is_multimetric)
+
+...........................................................................
+/usr/local/lib/python3.6/site-packages/sklearn/model_selection/_validation.py in _score(estimator=Pipeline(memory=None,
+     steps=[('drop_text', ....0, verbose=0,
+              warm_start=False))]), X_test=       starRating                 category  tota...                  0.0  
+
+[6483 rows x 16 columns], y_test=10873    4.0
+451      1.0
+1754     1.0
+6564     ...2    4.0
+8957     4.0
+Name: price, dtype: float64, scorer={'score': make_scorer(cohen_kappa_score)}, is_multimetric=True)
+    497 
+    498     Will return a single float if is_multimetric is False and a dict of floats,
+    499     if is_multimetric is True
+    500     """
+    501     if is_multimetric:
+--> 502         return _multimetric_score(estimator, X_test, y_test, scorer)
+        estimator = Pipeline(memory=None,
+     steps=[('drop_text', ....0, verbose=0,
+              warm_start=False))])
+        X_test =        starRating                 category  tota...                  0.0  
+
+[6483 rows x 16 columns]
+        y_test = 10873    4.0
+451      1.0
+1754     1.0
+6564     ...2    4.0
+8957     4.0
+Name: price, dtype: float64
+        scorer = {'score': make_scorer(cohen_kappa_score)}
+    503     else:
+    504         if y_test is None:
+    505             score = scorer(estimator, X_test)
+    506         else:
+
+...........................................................................
+/usr/local/lib/python3.6/site-packages/sklearn/model_selection/_validation.py in _multimetric_score(estimator=Pipeline(memory=None,
+     steps=[('drop_text', ....0, verbose=0,
+              warm_start=False))]), X_test=       starRating                 category  tota...                  0.0  
+
+[6483 rows x 16 columns], y_test=10873    4.0
+451      1.0
+1754     1.0
+6564     ...2    4.0
+8957     4.0
+Name: price, dtype: float64, scorers={'score': make_scorer(cohen_kappa_score)})
+    527 
+    528     for name, scorer in scorers.items():
+    529         if y_test is None:
+    530             score = scorer(estimator, X_test)
+    531         else:
+--> 532             score = scorer(estimator, X_test, y_test)
+        score = undefined
+        scorer = make_scorer(cohen_kappa_score)
+        estimator = Pipeline(memory=None,
+     steps=[('drop_text', ....0, verbose=0,
+              warm_start=False))])
+        X_test =        starRating                 category  tota...                  0.0  
+
+[6483 rows x 16 columns]
+        y_test = 10873    4.0
+451      1.0
+1754     1.0
+6564     ...2    4.0
+8957     4.0
+Name: price, dtype: float64
+    533 
+    534         if hasattr(score, 'item'):
+    535             try:
+    536                 # e.g. unwrap memmapped scalars
+
+...........................................................................
+/usr/local/lib/python3.6/site-packages/sklearn/metrics/scorer.py in __call__(self=make_scorer(cohen_kappa_score), estimator=Pipeline(memory=None,
+     steps=[('drop_text', ....0, verbose=0,
+              warm_start=False))]), X=       starRating                 category  tota...                  0.0  
+
+[6483 rows x 16 columns], y_true=10873    4.0
+451      1.0
+1754     1.0
+6564     ...2    4.0
+8957     4.0
+Name: price, dtype: float64, sample_weight=None)
+     96         score : float
+     97             Score function applied to prediction of estimator on X.
+     98         """
+     99         super(_PredictScorer, self).__call__(estimator, X, y_true,
+    100                                              sample_weight=sample_weight)
+--> 101         y_pred = estimator.predict(X)
+        y_pred = undefined
+        estimator.predict = <function Pipeline.predict>
+        X =        starRating                 category  tota...                  0.0  
+
+[6483 rows x 16 columns]
+    102         if sample_weight is not None:
+    103             return self._sign * self._score_func(y_true, y_pred,
+    104                                                  sample_weight=sample_weight,
+    105                                                  **self._kwargs)
+
+...........................................................................
+/usr/local/lib/python3.6/site-packages/sklearn/utils/metaestimators.py in <lambda>(*args=(       starRating                 category  tota...                  0.0  
+
+[6483 rows x 16 columns],), **kwargs={})
+    110                     break
+    111             else:
+    112                 attrgetter(self.delegate_names[-1])(obj)
+    113 
+    114         # lambda, but not partial, allows help() to work with update_wrapper
+--> 115         out = lambda *args, **kwargs: self.fn(obj, *args, **kwargs)
+        args = (       starRating                 category  tota...                  0.0  
+
+[6483 rows x 16 columns],)
+        kwargs = {}
+    116         # update the docstring of the returned function
+    117         update_wrapper(out, self.fn)
+    118         return out
+    119 
+
+...........................................................................
+/usr/local/lib/python3.6/site-packages/sklearn/pipeline.py in predict(self=Pipeline(memory=None,
+     steps=[('drop_text', ....0, verbose=0,
+              warm_start=False))]), X=       starRating                 category  tota...                  0.0  
+
+[6483 rows x 16 columns])
+    310         y_pred : array-like
+    311         """
+    312         Xt = X
+    313         for name, transform in self.steps[:-1]:
+    314             if transform is not None:
+--> 315                 Xt = transform.transform(Xt)
+        Xt =        starRating                 category  tota...                  0.0  
+
+[6483 rows x 15 columns]
+        transform.transform = <bound method DataFrameMapper.transform of DataF...)]), {})],
+        input_df=False, sparse=False)>
+    316         return self.steps[-1][-1].predict(Xt)
+    317 
+    318     @if_delegate_has_method(delegate='_final_estimator')
+    319     def fit_predict(self, X, y=None, **fit_params):
+
+...........................................................................
+/usr/local/lib/python3.6/site-packages/sklearn_pandas/dataframe_mapper.py in transform(self=DataFrameMapper(default=None, df_out=False,
+    ...))]), {})],
+        input_df=False, sparse=False), X=       starRating                 category  tota...                  0.0  
+
+[6483 rows x 15 columns])
+    255             # columns could be a string or list of
+    256             # strings; we don't care because pandas
+    257             # will handle either.
+    258             Xt = self._get_col_subset(X, columns, input_df)
+    259             if transformers is not None:
+--> 260                 Xt = transformers.transform(Xt)
+        Xt = array(['PARENTING', 'ARCADE', 'LIFESTYLE', ..., ...     'BOOKS & REFERENCE', 'MUSIC'], dtype=object)
+        transformers.transform = <bound method Pipeline._transform of Transformer...date=False)), ('labelencoder', LabelEncoder())])>
+    261             extracted.append(_handle_feature(Xt))
+    262 
+    263             alias = options.get('alias')
+    264             self.transformed_names_ += self.get_names(
+
+...........................................................................
+/usr/local/lib/python3.6/site-packages/sklearn/pipeline.py in _transform(self=TransformerPipeline(steps=[('functiontransformer...idate=False)), ('labelencoder', LabelEncoder())]), X=array(['PARENTING', 'ARCADE', 'LIFESTYLE', ..., ...     'BOOKS & REFERENCE', 'MUSIC'], dtype=object))
+    429 
+    430     def _transform(self, X):
+    431         Xt = X
+    432         for name, transform in self.steps:
+    433             if transform is not None:
+--> 434                 Xt = transform.transform(Xt)
+        Xt = array(['PARENTING', 'GAME-ARCADE', 'LIFESTYLE', ...OOKS & REFERENCE', 'MUSIC'], 
+      dtype='<U23')
+        transform.transform = <bound method LabelEncoder.transform of LabelEncoder()>
+    435         return Xt
+    436 
+    437     @property
+    438     def inverse_transform(self):
+
+...........................................................................
+/usr/local/lib/python3.6/site-packages/sklearn/preprocessing/label.py in transform(self=LabelEncoder(), y=array(['PARENTING', 'GAME-ARCADE', 'LIFESTYLE', ...OOKS & REFERENCE', 'MUSIC'], 
+      dtype='<U23'))
+    128         y = column_or_1d(y, warn=True)
+    129 
+    130         classes = np.unique(y)
+    131         if len(np.intersect1d(classes, self.classes_)) < len(classes):
+    132             diff = np.setdiff1d(classes, self.classes_)
+--> 133             raise ValueError("y contains new labels: %s" % str(diff))
+        diff = array(['BEAUTY'], 
+      dtype='<U23')
+    134         return np.searchsorted(self.classes_, y)
+    135 
+    136     def inverse_transform(self, y):
+    137         """Transform labels back to original encoding.
+
+ValueError: y contains new labels: ['BEAUTY']
+___________________________________________________________________________
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sklearn/externals/joblib/parallel.py", line 699, in retrieve
+    self._output.extend(job.get(timeout=self.timeout))
+  File "/usr/local/Cellar/python3/3.6.1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/multiprocessing/pool.py", line 608, in get
+    raise self._value
+sklearn.externals.joblib.my_exceptions.TransportableException: TransportableException
+___________________________________________________________________________
+ValueError                                         Mon Sep 18 01:19:37 2017
+PID: 61118               Python 3.6.1: /usr/local/opt/python3/bin/python3.6
+...........................................................................
+/usr/local/lib/python3.6/site-packages/sklearn/externals/joblib/parallel.py in __call__(self=<sklearn.externals.joblib.parallel.BatchedCalls object>)
+    126     def __init__(self, iterator_slice):
+    127         self.items = list(iterator_slice)
+    128         self._size = len(self.items)
+    129 
+    130     def __call__(self):
+--> 131         return [func(*args, **kwargs) for func, args, kwargs in self.items]
+        self.items = [(<function _fit_and_score>, (Pipeline(memory=None,
+     steps=[('drop_text', ....0, verbose=0,
+              warm_start=False))]),        starRating                 category  tota...                 3.0  
+
+[19445 rows x 16 columns], 10873    4.0
+451      1.0
+1754     1.0
+6564     ...8    1.0
+8017     1.0
+Name: price, dtype: float64, {'score': make_scorer(cohen_kappa_score)}, array([ 6420,  6421,  6424, ..., 19442, 19443, 19444]), array([   0,    1,    2, ..., 6571, 6574, 6576]), 4, {'gradient__learning_rate': 1000, 'gradient__loss': 'deviance', 'gradient__max_depth': 11, 'gradient__max_features': 'sqrt', 'gradient__n_estimators': 400}), {'error_score': nan, 'fit_params': {}, 'return_n_test_samples': True, 'return_parameters': False, 'return_times': True, 'return_train_score': True})]
+    132 
+    133     def __len__(self):
+    134         return self._size
+    135 
+
+...........................................................................
+/usr/local/lib/python3.6/site-packages/sklearn/externals/joblib/parallel.py in <listcomp>(.0=<list_iterator object>)
+    126     def __init__(self, iterator_slice):
+    127         self.items = list(iterator_slice)
+    128         self._size = len(self.items)
+    129 
+    130     def __call__(self):
+--> 131         return [func(*args, **kwargs) for func, args, kwargs in self.items]
+        func = <function _fit_and_score>
+        args = (Pipeline(memory=None,
+     steps=[('drop_text', ....0, verbose=0,
+              warm_start=False))]),        starRating                 category  tota...                 3.0  
+
+[19445 rows x 16 columns], 10873    4.0
+451      1.0
+1754     1.0
+6564     ...8    1.0
+8017     1.0
+Name: price, dtype: float64, {'score': make_scorer(cohen_kappa_score)}, array([ 6420,  6421,  6424, ..., 19442, 19443, 19444]), array([   0,    1,    2, ..., 6571, 6574, 6576]), 4, {'gradient__learning_rate': 1000, 'gradient__loss': 'deviance', 'gradient__max_depth': 11, 'gradient__max_features': 'sqrt', 'gradient__n_estimators': 400})
+        kwargs = {'error_score': nan, 'fit_params': {}, 'return_n_test_samples': True, 'return_parameters': False, 'return_times': True, 'return_train_score': True}
+    132 
+    133     def __len__(self):
+    134         return self._size
+    135 
+
+...........................................................................
+/usr/local/lib/python3.6/site-packages/sklearn/model_selection/_validation.py in _fit_and_score(estimator=Pipeline(memory=None,
+     steps=[('drop_text', ....0, verbose=0,
+              warm_start=False))]), X=       starRating                 category  tota...                 3.0  
+
+[19445 rows x 16 columns], y=10873    4.0
+451      1.0
+1754     1.0
+6564     ...8    1.0
+8017     1.0
+Name: price, dtype: float64, scorer={'score': make_scorer(cohen_kappa_score)}, train=array([ 6420,  6421,  6424, ..., 19442, 19443, 19444]), test=array([   0,    1,    2, ..., 6571, 6574, 6576]), verbose=4, parameters={'gradient__learning_rate': 1000, 'gradient__loss': 'deviance', 'gradient__max_depth': 11, 'gradient__max_features': 'sqrt', 'gradient__n_estimators': 400}, fit_params={}, return_train_score=True, return_parameters=False, return_n_test_samples=True, return_times=True, error_score=nan)
+    462                              " make sure that it has been spelled correctly.)")
+    463 
+    464     else:
+    465         fit_time = time.time() - start_time
+    466         # _score will return dict if is_multimetric is True
+--> 467         test_scores = _score(estimator, X_test, y_test, scorer, is_multimetric)
+        test_scores = {}
+        estimator = Pipeline(memory=None,
+     steps=[('drop_text', ....0, verbose=0,
+              warm_start=False))])
+        X_test =        starRating                 category  tota...                  0.0  
+
+[6483 rows x 16 columns]
+        y_test = 10873    4.0
+451      1.0
+1754     1.0
+6564     ...2    4.0
+8957     4.0
+Name: price, dtype: float64
+        scorer = {'score': make_scorer(cohen_kappa_score)}
+        is_multimetric = True
+    468         score_time = time.time() - start_time - fit_time
+    469         if return_train_score:
+    470             train_scores = _score(estimator, X_train, y_train, scorer,
+    471                                   is_multimetric)
+
+...........................................................................
+/usr/local/lib/python3.6/site-packages/sklearn/model_selection/_validation.py in _score(estimator=Pipeline(memory=None,
+     steps=[('drop_text', ....0, verbose=0,
+              warm_start=False))]), X_test=       starRating                 category  tota...                  0.0  
+
+[6483 rows x 16 columns], y_test=10873    4.0
+451      1.0
+1754     1.0
+6564     ...2    4.0
+8957     4.0
+Name: price, dtype: float64, scorer={'score': make_scorer(cohen_kappa_score)}, is_multimetric=True)
+    497 
+    498     Will return a single float if is_multimetric is False and a dict of floats,
+    499     if is_multimetric is True
+    500     """
+    501     if is_multimetric:
+--> 502         return _multimetric_score(estimator, X_test, y_test, scorer)
+        estimator = Pipeline(memory=None,
+     steps=[('drop_text', ....0, verbose=0,
+              warm_start=False))])
+        X_test =        starRating                 category  tota...                  0.0  
+
+[6483 rows x 16 columns]
+        y_test = 10873    4.0
+451      1.0
+1754     1.0
+6564     ...2    4.0
+8957     4.0
+Name: price, dtype: float64
+        scorer = {'score': make_scorer(cohen_kappa_score)}
+    503     else:
+    504         if y_test is None:
+    505             score = scorer(estimator, X_test)
+    506         else:
+
+...........................................................................
+/usr/local/lib/python3.6/site-packages/sklearn/model_selection/_validation.py in _multimetric_score(estimator=Pipeline(memory=None,
+     steps=[('drop_text', ....0, verbose=0,
+              warm_start=False))]), X_test=       starRating                 category  tota...                  0.0  
+
+[6483 rows x 16 columns], y_test=10873    4.0
+451      1.0
+1754     1.0
+6564     ...2    4.0
+8957     4.0
+Name: price, dtype: float64, scorers={'score': make_scorer(cohen_kappa_score)})
+    527 
+    528     for name, scorer in scorers.items():
+    529         if y_test is None:
+    530             score = scorer(estimator, X_test)
+    531         else:
+--> 532             score = scorer(estimator, X_test, y_test)
+        score = undefined
+        scorer = make_scorer(cohen_kappa_score)
+        estimator = Pipeline(memory=None,
+     steps=[('drop_text', ....0, verbose=0,
+              warm_start=False))])
+        X_test =        starRating                 category  tota...                  0.0  
+
+[6483 rows x 16 columns]
+        y_test = 10873    4.0
+451      1.0
+1754     1.0
+6564     ...2    4.0
+8957     4.0
+Name: price, dtype: float64
+    533 
+    534         if hasattr(score, 'item'):
+    535             try:
+    536                 # e.g. unwrap memmapped scalars
+
+...........................................................................
+/usr/local/lib/python3.6/site-packages/sklearn/metrics/scorer.py in __call__(self=make_scorer(cohen_kappa_score), estimator=Pipeline(memory=None,
+     steps=[('drop_text', ....0, verbose=0,
+              warm_start=False))]), X=       starRating                 category  tota...                  0.0  
+
+[6483 rows x 16 columns], y_true=10873    4.0
+451      1.0
+1754     1.0
+6564     ...2    4.0
+8957     4.0
+Name: price, dtype: float64, sample_weight=None)
+     96         score : float
+     97             Score function applied to prediction of estimator on X.
+     98         """
+     99         super(_PredictScorer, self).__call__(estimator, X, y_true,
+    100                                              sample_weight=sample_weight)
+--> 101         y_pred = estimator.predict(X)
+        y_pred = undefined
+        estimator.predict = <function Pipeline.predict>
+        X =        starRating                 category  tota...                  0.0  
+
+[6483 rows x 16 columns]
+    102         if sample_weight is not None:
+    103             return self._sign * self._score_func(y_true, y_pred,
+    104                                                  sample_weight=sample_weight,
+    105                                                  **self._kwargs)
+
+...........................................................................
+/usr/local/lib/python3.6/site-packages/sklearn/utils/metaestimators.py in <lambda>(*args=(       starRating                 category  tota...                  0.0  
+
+[6483 rows x 16 columns],), **kwargs={})
+    110                     break
+    111             else:
+    112                 attrgetter(self.delegate_names[-1])(obj)
+    113 
+    114         # lambda, but not partial, allows help() to work with update_wrapper
+--> 115         out = lambda *args, **kwargs: self.fn(obj, *args, **kwargs)
+        args = (       starRating                 category  tota...                  0.0  
+
+[6483 rows x 16 columns],)
+        kwargs = {}
+    116         # update the docstring of the returned function
+    117         update_wrapper(out, self.fn)
+    118         return out
+    119 
+
+...........................................................................
+/usr/local/lib/python3.6/site-packages/sklearn/pipeline.py in predict(self=Pipeline(memory=None,
+     steps=[('drop_text', ....0, verbose=0,
+              warm_start=False))]), X=       starRating                 category  tota...                  0.0  
+
+[6483 rows x 16 columns])
+    310         y_pred : array-like
+    311         """
+    312         Xt = X
+    313         for name, transform in self.steps[:-1]:
+    314             if transform is not None:
+--> 315                 Xt = transform.transform(Xt)
+        Xt =        starRating                 category  tota...                  0.0  
+
+[6483 rows x 15 columns]
+        transform.transform = <bound method DataFrameMapper.transform of DataF...)]), {})],
+        input_df=False, sparse=False)>
+    316         return self.steps[-1][-1].predict(Xt)
+    317 
+    318     @if_delegate_has_method(delegate='_final_estimator')
+    319     def fit_predict(self, X, y=None, **fit_params):
+
+...........................................................................
+/usr/local/lib/python3.6/site-packages/sklearn_pandas/dataframe_mapper.py in transform(self=DataFrameMapper(default=None, df_out=False,
+    ...))]), {})],
+        input_df=False, sparse=False), X=       starRating                 category  tota...                  0.0  
+
+[6483 rows x 15 columns])
+    255             # columns could be a string or list of
+    256             # strings; we don't care because pandas
+    257             # will handle either.
+    258             Xt = self._get_col_subset(X, columns, input_df)
+    259             if transformers is not None:
+--> 260                 Xt = transformers.transform(Xt)
+        Xt = array(['PARENTING', 'ARCADE', 'LIFESTYLE', ..., ...     'BOOKS & REFERENCE', 'MUSIC'], dtype=object)
+        transformers.transform = <bound method Pipeline._transform of Transformer...date=False)), ('labelencoder', LabelEncoder())])>
+    261             extracted.append(_handle_feature(Xt))
+    262 
+    263             alias = options.get('alias')
+    264             self.transformed_names_ += self.get_names(
+
+...........................................................................
+/usr/local/lib/python3.6/site-packages/sklearn/pipeline.py in _transform(self=TransformerPipeline(steps=[('functiontransformer...idate=False)), ('labelencoder', LabelEncoder())]), X=array(['PARENTING', 'ARCADE', 'LIFESTYLE', ..., ...     'BOOKS & REFERENCE', 'MUSIC'], dtype=object))
+    429 
+    430     def _transform(self, X):
+    431         Xt = X
+    432         for name, transform in self.steps:
+    433             if transform is not None:
+--> 434                 Xt = transform.transform(Xt)
+        Xt = array(['PARENTING', 'GAME-ARCADE', 'LIFESTYLE', ...OOKS & REFERENCE', 'MUSIC'], 
+      dtype='<U23')
+        transform.transform = <bound method LabelEncoder.transform of LabelEncoder()>
+    435         return Xt
+    436 
+    437     @property
+    438     def inverse_transform(self):
+
+...........................................................................
+/usr/local/lib/python3.6/site-packages/sklearn/preprocessing/label.py in transform(self=LabelEncoder(), y=array(['PARENTING', 'GAME-ARCADE', 'LIFESTYLE', ...OOKS & REFERENCE', 'MUSIC'], 
+      dtype='<U23'))
+    128         y = column_or_1d(y, warn=True)
+    129 
+    130         classes = np.unique(y)
+    131         if len(np.intersect1d(classes, self.classes_)) < len(classes):
+    132             diff = np.setdiff1d(classes, self.classes_)
+--> 133             raise ValueError("y contains new labels: %s" % str(diff))
+        diff = array(['BEAUTY'], 
+      dtype='<U23')
+    134         return np.searchsorted(self.classes_, y)
+    135 
+    136     def inverse_transform(self, y):
+    137         """Transform labels back to original encoding.
+
+ValueError: y contains new labels: ['BEAUTY']
+___________________________________________________________________________
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/simon/Documents/code/nodejs/master-project/mp_data_analysis/analysis/learn.py", line 268, in <module>
+    main()
+  File "/Users/simon/Documents/code/nodejs/master-project/mp_data_analysis/analysis/learn.py", line 127, in main
+    search.fit(X_train, y_train)
+  File "/usr/local/lib/python3.6/site-packages/sklearn/model_selection/_search.py", line 638, in fit
+    cv.split(X, y, groups)))
+  File "/usr/local/lib/python3.6/site-packages/sklearn/externals/joblib/parallel.py", line 789, in __call__
+    self.retrieve()
+  File "/usr/local/lib/python3.6/site-packages/sklearn/externals/joblib/parallel.py", line 740, in retrieve
+    raise exception
+sklearn.externals.joblib.my_exceptions.JoblibValueError: JoblibValueError
+___________________________________________________________________________
+Multiprocessing exception:
+...........................................................................
+/Users/simon/Documents/code/nodejs/master-project/mp_data_analysis/analysis/learn.py in <module>()
+    263     print("{:}={:.3}"
+    264           .format('score_accuracy_eval', rs.score_accuracy_eval))
+    265 
+    266 
+    267 if __name__ == '__main__':
+--> 268     main()
+
+...........................................................................
+/Users/simon/Documents/code/nodejs/master-project/mp_data_analysis/analysis/learn.py in main()
+    122 
+    123         ######################################
+    124         # Model fitting
+    125         #
+    126         start = time()
+--> 127         search.fit(X_train, y_train)
+        search.fit = <bound method BaseSearchCV.fit of RandomizedSear..._scorer(cohen_kappa_score),
+          verbose=4)>
+        X_train =        starRating                 category  tota...                 3.0  
+
+[19445 rows x 16 columns]
+        y_train = 10873    4.0
+451      1.0
+1754     1.0
+6564     ...8    1.0
+8017     1.0
+Name: price, dtype: float64
+    128         duration = time() - start
+    129 
+    130         ######################################
+    131         # Model prediction
+
+...........................................................................
+/usr/local/lib/python3.6/site-packages/sklearn/model_selection/_search.py in fit(self=RandomizedSearchCV(cv=StratifiedKFold(n_splits=3...e_scorer(cohen_kappa_score),
+          verbose=4), X=       starRating                 category  tota...                 3.0  
+
+[19445 rows x 16 columns], y=10873    4.0
+451      1.0
+1754     1.0
+6564     ...8    1.0
+8017     1.0
+Name: price, dtype: float64, groups=None, **fit_params={})
+    633                                   return_train_score=self.return_train_score,
+    634                                   return_n_test_samples=True,
+    635                                   return_times=True, return_parameters=False,
+    636                                   error_score=self.error_score)
+    637           for parameters, (train, test) in product(candidate_params,
+--> 638                                                    cv.split(X, y, groups)))
+        cv.split = <bound method StratifiedKFold.split of Stratifie...ld(n_splits=3, random_state=None, shuffle=False)>
+        X =        starRating                 category  tota...                 3.0  
+
+[19445 rows x 16 columns]
+        y = 10873    4.0
+451      1.0
+1754     1.0
+6564     ...8    1.0
+8017     1.0
+Name: price, dtype: float64
+        groups = None
+    639 
+    640         # if one choose to see train score, "out" will contain train score info
+    641         if self.return_train_score:
+    642             (train_score_dicts, test_score_dicts, test_sample_counts, fit_time,
+
+...........................................................................
+/usr/local/lib/python3.6/site-packages/sklearn/externals/joblib/parallel.py in __call__(self=Parallel(n_jobs=-1), iterable=<generator object BaseSearchCV.fit.<locals>.<genexpr>>)
+    784             if pre_dispatch == "all" or n_jobs == 1:
+    785                 # The iterable was consumed all at once by the above for loop.
+    786                 # No need to wait for async callbacks to trigger to
+    787                 # consumption.
+    788                 self._iterating = False
+--> 789             self.retrieve()
+        self.retrieve = <bound method Parallel.retrieve of Parallel(n_jobs=-1)>
+    790             # Make sure that we get a last message telling us we are done
+    791             elapsed_time = time.time() - self._start_time
+    792             self._print('Done %3i out of %3i | elapsed: %s finished',
+    793                         (len(self._output), len(self._output),
+
+---------------------------------------------------------------------------
+Sub-process traceback:
+---------------------------------------------------------------------------
+ValueError                                         Mon Sep 18 01:19:37 2017
+PID: 61118               Python 3.6.1: /usr/local/opt/python3/bin/python3.6
+...........................................................................
+/usr/local/lib/python3.6/site-packages/sklearn/externals/joblib/parallel.py in __call__(self=<sklearn.externals.joblib.parallel.BatchedCalls object>)
+    126     def __init__(self, iterator_slice):
+    127         self.items = list(iterator_slice)
+    128         self._size = len(self.items)
+    129 
+    130     def __call__(self):
+--> 131         return [func(*args, **kwargs) for func, args, kwargs in self.items]
+        self.items = [(<function _fit_and_score>, (Pipeline(memory=None,
+     steps=[('drop_text', ....0, verbose=0,
+              warm_start=False))]),        starRating                 category  tota...                 3.0  
+
+[19445 rows x 16 columns], 10873    4.0
+451      1.0
+1754     1.0
+6564     ...8    1.0
+8017     1.0
+Name: price, dtype: float64, {'score': make_scorer(cohen_kappa_score)}, array([ 6420,  6421,  6424, ..., 19442, 19443, 19444]), array([   0,    1,    2, ..., 6571, 6574, 6576]), 4, {'gradient__learning_rate': 1000, 'gradient__loss': 'deviance', 'gradient__max_depth': 11, 'gradient__max_features': 'sqrt', 'gradient__n_estimators': 400}), {'error_score': nan, 'fit_params': {}, 'return_n_test_samples': True, 'return_parameters': False, 'return_times': True, 'return_train_score': True})]
+    132 
+    133     def __len__(self):
+    134         return self._size
+    135 
+
+...........................................................................
+/usr/local/lib/python3.6/site-packages/sklearn/externals/joblib/parallel.py in <listcomp>(.0=<list_iterator object>)
+    126     def __init__(self, iterator_slice):
+    127         self.items = list(iterator_slice)
+    128         self._size = len(self.items)
+    129 
+    130     def __call__(self):
+--> 131         return [func(*args, **kwargs) for func, args, kwargs in self.items]
+        func = <function _fit_and_score>
+        args = (Pipeline(memory=None,
+     steps=[('drop_text', ....0, verbose=0,
+              warm_start=False))]),        starRating                 category  tota...                 3.0  
+
+[19445 rows x 16 columns], 10873    4.0
+451      1.0
+1754     1.0
+6564     ...8    1.0
+8017     1.0
+Name: price, dtype: float64, {'score': make_scorer(cohen_kappa_score)}, array([ 6420,  6421,  6424, ..., 19442, 19443, 19444]), array([   0,    1,    2, ..., 6571, 6574, 6576]), 4, {'gradient__learning_rate': 1000, 'gradient__loss': 'deviance', 'gradient__max_depth': 11, 'gradient__max_features': 'sqrt', 'gradient__n_estimators': 400})
+        kwargs = {'error_score': nan, 'fit_params': {}, 'return_n_test_samples': True, 'return_parameters': False, 'return_times': True, 'return_train_score': True}
+    132 
+    133     def __len__(self):
+    134         return self._size
+    135 
+
+...........................................................................
+/usr/local/lib/python3.6/site-packages/sklearn/model_selection/_validation.py in _fit_and_score(estimator=Pipeline(memory=None,
+     steps=[('drop_text', ....0, verbose=0,
+              warm_start=False))]), X=       starRating                 category  tota...                 3.0  
+
+[19445 rows x 16 columns], y=10873    4.0
+451      1.0
+1754     1.0
+6564     ...8    1.0
+8017     1.0
+Name: price, dtype: float64, scorer={'score': make_scorer(cohen_kappa_score)}, train=array([ 6420,  6421,  6424, ..., 19442, 19443, 19444]), test=array([   0,    1,    2, ..., 6571, 6574, 6576]), verbose=4, parameters={'gradient__learning_rate': 1000, 'gradient__loss': 'deviance', 'gradient__max_depth': 11, 'gradient__max_features': 'sqrt', 'gradient__n_estimators': 400}, fit_params={}, return_train_score=True, return_parameters=False, return_n_test_samples=True, return_times=True, error_score=nan)
+    462                              " make sure that it has been spelled correctly.)")
+    463 
+    464     else:
+    465         fit_time = time.time() - start_time
+    466         # _score will return dict if is_multimetric is True
+--> 467         test_scores = _score(estimator, X_test, y_test, scorer, is_multimetric)
+        test_scores = {}
+        estimator = Pipeline(memory=None,
+     steps=[('drop_text', ....0, verbose=0,
+              warm_start=False))])
+        X_test =        starRating                 category  tota...                  0.0  
+
+[6483 rows x 16 columns]
+        y_test = 10873    4.0
+451      1.0
+1754     1.0
+6564     ...2    4.0
+8957     4.0
+Name: price, dtype: float64
+        scorer = {'score': make_scorer(cohen_kappa_score)}
+        is_multimetric = True
+    468         score_time = time.time() - start_time - fit_time
+    469         if return_train_score:
+    470             train_scores = _score(estimator, X_train, y_train, scorer,
+    471                                   is_multimetric)
+
+...........................................................................
+/usr/local/lib/python3.6/site-packages/sklearn/model_selection/_validation.py in _score(estimator=Pipeline(memory=None,
+     steps=[('drop_text', ....0, verbose=0,
+              warm_start=False))]), X_test=       starRating                 category  tota...                  0.0  
+
+[6483 rows x 16 columns], y_test=10873    4.0
+451      1.0
+1754     1.0
+6564     ...2    4.0
+8957     4.0
+Name: price, dtype: float64, scorer={'score': make_scorer(cohen_kappa_score)}, is_multimetric=True)
+    497 
+    498     Will return a single float if is_multimetric is False and a dict of floats,
+    499     if is_multimetric is True
+    500     """
+    501     if is_multimetric:
+--> 502         return _multimetric_score(estimator, X_test, y_test, scorer)
+        estimator = Pipeline(memory=None,
+     steps=[('drop_text', ....0, verbose=0,
+              warm_start=False))])
+        X_test =        starRating                 category  tota...                  0.0  
+
+[6483 rows x 16 columns]
+        y_test = 10873    4.0
+451      1.0
+1754     1.0
+6564     ...2    4.0
+8957     4.0
+Name: price, dtype: float64
+        scorer = {'score': make_scorer(cohen_kappa_score)}
+    503     else:
+    504         if y_test is None:
+    505             score = scorer(estimator, X_test)
+    506         else:
+
+...........................................................................
+/usr/local/lib/python3.6/site-packages/sklearn/model_selection/_validation.py in _multimetric_score(estimator=Pipeline(memory=None,
+     steps=[('drop_text', ....0, verbose=0,
+              warm_start=False))]), X_test=       starRating                 category  tota...                  0.0  
+
+[6483 rows x 16 columns], y_test=10873    4.0
+451      1.0
+1754     1.0
+6564     ...2    4.0
+8957     4.0
+Name: price, dtype: float64, scorers={'score': make_scorer(cohen_kappa_score)})
+    527 
+    528     for name, scorer in scorers.items():
+    529         if y_test is None:
+    530             score = scorer(estimator, X_test)
+    531         else:
+--> 532             score = scorer(estimator, X_test, y_test)
+        score = undefined
+        scorer = make_scorer(cohen_kappa_score)
+        estimator = Pipeline(memory=None,
+     steps=[('drop_text', ....0, verbose=0,
+              warm_start=False))])
+        X_test =        starRating                 category  tota...                  0.0  
+
+[6483 rows x 16 columns]
+        y_test = 10873    4.0
+451      1.0
+1754     1.0
+6564     ...2    4.0
+8957     4.0
+Name: price, dtype: float64
+    533 
+    534         if hasattr(score, 'item'):
+    535             try:
+    536                 # e.g. unwrap memmapped scalars
+
+...........................................................................
+/usr/local/lib/python3.6/site-packages/sklearn/metrics/scorer.py in __call__(self=make_scorer(cohen_kappa_score), estimator=Pipeline(memory=None,
+     steps=[('drop_text', ....0, verbose=0,
+              warm_start=False))]), X=       starRating                 category  tota...                  0.0  
+
+[6483 rows x 16 columns], y_true=10873    4.0
+451      1.0
+1754     1.0
+6564     ...2    4.0
+8957     4.0
+Name: price, dtype: float64, sample_weight=None)
+     96         score : float
+     97             Score function applied to prediction of estimator on X.
+     98         """
+     99         super(_PredictScorer, self).__call__(estimator, X, y_true,
+    100                                              sample_weight=sample_weight)
+--> 101         y_pred = estimator.predict(X)
+        y_pred = undefined
+        estimator.predict = <function Pipeline.predict>
+        X =        starRating                 category  tota...                  0.0  
+
+[6483 rows x 16 columns]
+    102         if sample_weight is not None:
+    103             return self._sign * self._score_func(y_true, y_pred,
+    104                                                  sample_weight=sample_weight,
+    105                                                  **self._kwargs)
+
+...........................................................................
+/usr/local/lib/python3.6/site-packages/sklearn/utils/metaestimators.py in <lambda>(*args=(       starRating                 category  tota...                  0.0  
+
+[6483 rows x 16 columns],), **kwargs={})
+    110                     break
+    111             else:
+    112                 attrgetter(self.delegate_names[-1])(obj)
+    113 
+    114         # lambda, but not partial, allows help() to work with update_wrapper
+--> 115         out = lambda *args, **kwargs: self.fn(obj, *args, **kwargs)
+        args = (       starRating                 category  tota...                  0.0  
+
+[6483 rows x 16 columns],)
+        kwargs = {}
+    116         # update the docstring of the returned function
+    117         update_wrapper(out, self.fn)
+    118         return out
+    119 
+
+...........................................................................
+/usr/local/lib/python3.6/site-packages/sklearn/pipeline.py in predict(self=Pipeline(memory=None,
+     steps=[('drop_text', ....0, verbose=0,
+              warm_start=False))]), X=       starRating                 category  tota...                  0.0  
+
+[6483 rows x 16 columns])
+    310         y_pred : array-like
+    311         """
+    312         Xt = X
+    313         for name, transform in self.steps[:-1]:
+    314             if transform is not None:
+--> 315                 Xt = transform.transform(Xt)
+        Xt =        starRating                 category  tota...                  0.0  
+
+[6483 rows x 15 columns]
+        transform.transform = <bound method DataFrameMapper.transform of DataF...)]), {})],
+        input_df=False, sparse=False)>
+    316         return self.steps[-1][-1].predict(Xt)
+    317 
+    318     @if_delegate_has_method(delegate='_final_estimator')
+    319     def fit_predict(self, X, y=None, **fit_params):
+
+...........................................................................
+/usr/local/lib/python3.6/site-packages/sklearn_pandas/dataframe_mapper.py in transform(self=DataFrameMapper(default=None, df_out=False,
+    ...))]), {})],
+        input_df=False, sparse=False), X=       starRating                 category  tota...                  0.0  
+
+[6483 rows x 15 columns])
+    255             # columns could be a string or list of
+    256             # strings; we don't care because pandas
+    257             # will handle either.
+    258             Xt = self._get_col_subset(X, columns, input_df)
+    259             if transformers is not None:
+--> 260                 Xt = transformers.transform(Xt)
+        Xt = array(['PARENTING', 'ARCADE', 'LIFESTYLE', ..., ...     'BOOKS & REFERENCE', 'MUSIC'], dtype=object)
+        transformers.transform = <bound method Pipeline._transform of Transformer...date=False)), ('labelencoder', LabelEncoder())])>
+    261             extracted.append(_handle_feature(Xt))
+    262 
+    263             alias = options.get('alias')
+    264             self.transformed_names_ += self.get_names(
+
+...........................................................................
+/usr/local/lib/python3.6/site-packages/sklearn/pipeline.py in _transform(self=TransformerPipeline(steps=[('functiontransformer...idate=False)), ('labelencoder', LabelEncoder())]), X=array(['PARENTING', 'ARCADE', 'LIFESTYLE', ..., ...     'BOOKS & REFERENCE', 'MUSIC'], dtype=object))
+    429 
+    430     def _transform(self, X):
+    431         Xt = X
+    432         for name, transform in self.steps:
+    433             if transform is not None:
+--> 434                 Xt = transform.transform(Xt)
+        Xt = array(['PARENTING', 'GAME-ARCADE', 'LIFESTYLE', ...OOKS & REFERENCE', 'MUSIC'], 
+      dtype='<U23')
+        transform.transform = <bound method LabelEncoder.transform of LabelEncoder()>
+    435         return Xt
+    436 
+    437     @property
+    438     def inverse_transform(self):
+
+...........................................................................
+/usr/local/lib/python3.6/site-packages/sklearn/preprocessing/label.py in transform(self=LabelEncoder(), y=array(['PARENTING', 'GAME-ARCADE', 'LIFESTYLE', ...OOKS & REFERENCE', 'MUSIC'], 
+      dtype='<U23'))
+    128         y = column_or_1d(y, warn=True)
+    129 
+    130         classes = np.unique(y)
+    131         if len(np.intersect1d(classes, self.classes_)) < len(classes):
+    132             diff = np.setdiff1d(classes, self.classes_)
+--> 133             raise ValueError("y contains new labels: %s" % str(diff))
+        diff = array(['BEAUTY'], 
+      dtype='<U23')
+    134         return np.searchsorted(self.classes_, y)
+    135 
+    136     def inverse_transform(self, y):
+    137         """Transform labels back to original encoding.
+
+ValueError: y contains new labels: ['BEAUTY']
+___________________________________________________________________________

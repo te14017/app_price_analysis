@@ -1,0 +1,69 @@
+price                           float64
+starRating                      float64
+category                         object
+totalNrOfReviews                float64
+installs                         object
+contentRating                    object
+appUrl                           object
+libraries                       float64
+bigCompany                      float64
+daysSinceLastUpdated            float64
+text                             object
+1starReviews                    float64
+2starReviews                    float64
+3starReviews                    float64
+4starReviews                    float64
+5starReviews                    float64
+requiredAndroidVersion_major    float64
+requiredAndroidVersion_minor    float64
+similarAppsAvgPrice             float64
+dtype: object
+(25927, 19) transformed data
+2 features dropped
+(25927, 16) X_all
+(19445, 16) X_train
+(6482, 16) X_eval
+
+y_train value counts:
+2.0    5421
+1.0    5371
+3.0    4710
+4.0    3943
+Name: price, dtype: int64
+
+y_eval value counts:
+2.0    1851
+1.0    1823
+3.0    1569
+4.0    1239
+Name: price, dtype: int64
+Fitting 3 folds for each of 10 candidates, totalling 30 fits
+
+
+score_precision_eval_mean=0.55 (+/- 0.0677)
+score_recall_eval_mean=0.525 (+/- 0.0719)
+score_f1_eval_mean=0.531 (+/- 0.0359)
+score_accuracy_eval=0.531
+Fitting 3 folds for each of 10 candidates, totalling 30 fits
+[Parallel(n_jobs=-1)]: Done   9 tasks      | elapsed:  1.2min
+[Parallel(n_jobs=-1)]: Done  23 out of  30 | elapsed:  2.2min remaining:   39.5s
+[Parallel(n_jobs=-1)]: Done  30 out of  30 | elapsed:  2.6min finished
+
+
+score_precision_eval_mean=0.437 (+/- 0.0162)
+score_recall_eval_mean=0.432 (+/- 0.0521)
+score_f1_eval_mean=0.434 (+/- 0.0316)
+score_accuracy_eval=0.438
+Fitting 3 folds for each of 10 candidates, totalling 30 fits
+[Parallel(n_jobs=-1)]: Done   9 tasks      | elapsed:  6.1min
+[Parallel(n_jobs=-1)]: Done  23 out of  30 | elapsed: 13.8min remaining:  4.2min
+[Parallel(n_jobs=-1)]: Done  30 out of  30 | elapsed: 20.2min finished
+[Parallel(n_jobs=-1)]: Done   9 tasks      | elapsed: 20.8min
+[Parallel(n_jobs=-1)]: Done  23 out of  30 | elapsed: 36.6min remaining: 11.1min
+[Parallel(n_jobs=-1)]: Done  30 out of  30 | elapsed: 48.8min finished
+
+
+score_precision_eval_mean=0.541 (+/- 0.0448)
+score_recall_eval_mean=0.546 (+/- 0.0584)
+score_f1_eval_mean=0.542 (+/- 0.0449)
+score_accuracy_eval=0.539

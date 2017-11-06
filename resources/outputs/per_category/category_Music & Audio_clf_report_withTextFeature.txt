@@ -1,0 +1,130 @@
+
+SGDClassifier: 
+accuracy: 0.345360824742
+
+             precision    recall  f1-score   support
+
+          1       0.76      0.67      0.71       239
+          2       0.00      0.00      0.00       162
+          3       0.11      0.75      0.19        53
+          4       0.00      0.00      0.00       128
+
+avg / total       0.32      0.35      0.31       582
+
+predict results details:
+
+                count  error_type   percent
+target predict                             
+1      1          161           0  0.673640
+       3           78           2  0.326360
+2      1           20           1  0.123457
+       3          142           1  0.876543
+3      1           13           2  0.245283
+       3           40           0  0.754717
+4      1           18           3  0.140625
+       3          110           1  0.859375
+==========================================
+
+KNeighborsClassifier: 
+accuracy: 0.465635738832
+
+             precision    recall  f1-score   support
+
+          1       0.76      0.67      0.71       239
+          2       0.00      0.00      0.00       162
+          3       0.00      0.00      0.00        53
+          4       0.30      0.86      0.44       128
+
+avg / total       0.38      0.47      0.39       582
+
+predict results details:
+
+                count  error_type   percent
+target predict                             
+1      1          161           0  0.673640
+       4           78           3  0.326360
+2      1           20           1  0.123457
+       4          142           2  0.876543
+3      1           13           2  0.245283
+       4           40           1  0.754717
+4      1           18           3  0.140625
+       4          110           0  0.859375
+==========================================
+
+GaussianNB: 
+accuracy: 0.520618556701
+
+             precision    recall  f1-score   support
+
+          1       0.76      0.67      0.71       239
+          2       0.38      0.88      0.53       162
+          3       0.00      0.00      0.00        53
+          4       0.00      0.00      0.00       128
+
+avg / total       0.42      0.52      0.44       582
+
+predict results details:
+
+                count  error_type   percent
+target predict                             
+1      1          161           0  0.673640
+       2           78           1  0.326360
+2      1           20           1  0.123457
+       2          142           0  0.876543
+3      1           13           2  0.245283
+       2           40           1  0.754717
+4      1           18           3  0.140625
+       2          110           2  0.859375
+==========================================
+
+DecisionTreeClassifier: 
+accuracy: 0.520618556701
+
+             precision    recall  f1-score   support
+
+          1       0.76      0.67      0.71       239
+          2       0.38      0.88      0.53       162
+          3       0.00      0.00      0.00        53
+          4       0.00      0.00      0.00       128
+
+avg / total       0.42      0.52      0.44       582
+
+predict results details:
+
+                count  error_type   percent
+target predict                             
+1      1          161           0  0.673640
+       2           78           1  0.326360
+2      1           20           1  0.123457
+       2          142           0  0.876543
+3      1           13           2  0.245283
+       2           40           1  0.754717
+4      1           18           3  0.140625
+       2          110           2  0.859375
+==========================================
+
+GradientBoostingClassifier: 
+accuracy: 0.520618556701
+
+             precision    recall  f1-score   support
+
+          1       0.76      0.67      0.71       239
+          2       0.38      0.88      0.53       162
+          3       0.00      0.00      0.00        53
+          4       0.00      0.00      0.00       128
+
+avg / total       0.42      0.52      0.44       582
+
+predict results details:
+
+                count  error_type   percent
+target predict                             
+1      1          161           0  0.673640
+       2           78           1  0.326360
+2      1           20           1  0.123457
+       2          142           0  0.876543
+3      1           13           2  0.245283
+       2           40           1  0.754717
+4      1           18           3  0.140625
+       2          110           2  0.859375
+==========================================

@@ -1,0 +1,97 @@
+
+price_range_index: 
+1    8163
+2    7844
+4    7098
+3    5312
+
+category: 
+Education                  2007
+Personalization            1788
+Music & Audio              1743
+Books & Reference          1656
+Lifestyle                  1633
+Entertainment              1573
+Puzzle                     1474
+Productivity               1470
+Tools                      1398
+Health & Fitness           1302
+Sports                     1178
+Educational                 970
+Casual                      843
+Adventure                   790
+Arcade                      780
+Medical                     741
+Travel & Local              702
+Photography                 672
+Communication               637
+Business                    611
+Simulation                  527
+Action                      519
+Role Playing                495
+Strategy                    442
+Video Players & Editors     406
+Maps & Navigation           404
+Finance                     372
+Card                        317
+Board                       272
+Weather                     267
+Social                      239
+Racing                      188
+
+contentRating: 
+Everyone        24931
+Teen             2023
+Everyone 10+     1071
+Mature 17+        357
+Unrated            34
+
+requiredAndroidVersion_d1: 
+4    13767
+2    11212
+3     1525
+1     1489
+5      424
+
+requiredAndroidVersion_d2: 
+0    10933
+3     6529
+1     4560
+2     3928
+4     1038
+6     1031
+5      398
+
+requiredAndroidVersion_d3: 
+0    22816
+3     5392
+1      206
+4        3
+
+ranking: 
+Unranked         9458
+Highly_ranked    7092
+Medium_ranked    6569
+Top_ranked       3103
+no_info          2189
+other               6
+
+offersInAppPurchases: 
+0    25115
+1     3302
+
+installs: 
+100 - 500                  6451
+1,000 - 5,000              5929
+10 - 50                    3406
+500 - 1,000                2908
+10,000 - 50,000            2777
+50 - 100                   2111
+5,000 - 10,000             1978
+1 - 5                       975
+50,000 - 100,000            619
+5 - 10                      602
+100,000 - 500,000           538
+500,000 - 1,000,000          77
+1,000,000 - 5,000,000        45
+10,000,000 - 50,000,000       1

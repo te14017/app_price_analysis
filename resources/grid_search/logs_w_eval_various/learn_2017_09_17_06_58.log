@@ -1,0 +1,71 @@
+price                           float64
+starRating                      float64
+category                         object
+totalNrOfReviews                float64
+installs                         object
+contentRating                    object
+appUrl                           object
+libraries                       float64
+bigCompany                      float64
+daysSinceLastUpdated            float64
+text                             object
+1starReviews                    float64
+2starReviews                    float64
+3starReviews                    float64
+4starReviews                    float64
+5starReviews                    float64
+requiredAndroidVersion_major    float64
+requiredAndroidVersion_minor    float64
+similarAppsAvgPrice             float64
+dtype: object
+(25927, 19) transformed data
+2 features dropped
+(25927, 16) X_all
+(19445, 16) X_train
+(6482, 16) X_eval
+
+y_train value counts:
+2.0    5504
+1.0    5386
+3.0    4695
+4.0    3860
+Name: price, dtype: int64
+
+y_eval value counts:
+1.0    1808
+2.0    1768
+3.0    1584
+4.0    1322
+Name: price, dtype: int64
+Fitting 3 folds for each of 10 candidates, totalling 30 fits
+
+
+score_precision_eval_mean=0.495 (+/- 0.0491)
+score_recall_eval_mean=0.489 (+/- 0.0709)
+score_f1_eval_mean=0.489 (+/- 0.049)
+score_accuracy_eval=0.489
+Fitting 3 folds for each of 10 candidates, totalling 30 fits
+[Parallel(n_jobs=-1)]: Done   9 tasks      | elapsed:   35.4s
+[Parallel(n_jobs=-1)]: Done  23 out of  30 | elapsed:  1.1min remaining:   20.6s
+[Parallel(n_jobs=-1)]: Done  30 out of  30 | elapsed:  1.4min finished
+
+
+score_precision_eval_mean=0.433 (+/- 0.0138)
+score_recall_eval_mean=0.428 (+/- 0.0655)
+score_f1_eval_mean=0.429 (+/- 0.0354)
+score_accuracy_eval=0.433
+Fitting 3 folds for each of 10 candidates, totalling 30 fits
+[Parallel(n_jobs=-1)]: Done   9 tasks      | elapsed:  7.9min
+[Parallel(n_jobs=-1)]: Done  23 out of  30 | elapsed: 15.1min remaining:  4.6min
+[Parallel(n_jobs=-1)]: Done  30 out of  30 | elapsed: 27.5min finished
+[Parallel(n_jobs=-1)]: Done   9 tasks      | elapsed: 17.7min
+[Parallel(n_jobs=-1)]: Done  23 out of  30 | elapsed: 36.5min remaining: 11.1min
+[Parallel(n_jobs=-1)]: Done  30 out of  30 | elapsed: 46.1min finished
+/usr/local/lib/python3.6/site-packages/sklearn/svm/base.py:218: ConvergenceWarning: Solver terminated early (max_iter=10000).  Consider pre-processing your data with StandardScaler or MinMaxScaler.
+  % self.max_iter, ConvergenceWarning)
+
+
+score_precision_eval_mean=0.536 (+/- 0.0572)
+score_recall_eval_mean=0.536 (+/- 0.05)
+score_f1_eval_mean=0.536 (+/- 0.0529)
+score_accuracy_eval=0.532

@@ -1,0 +1,245 @@
+price                           float64
+starRating                      float64
+category                         object
+totalNrOfReviews                float64
+installs                         object
+contentRating                    object
+appUrl                           object
+libraries                       float64
+bigCompany                      float64
+daysSinceLastUpdated            float64
+text                             object
+1starReviews                    float64
+2starReviews                    float64
+3starReviews                    float64
+4starReviews                    float64
+5starReviews                    float64
+requiredAndroidVersion_major    float64
+requiredAndroidVersion_minor    float64
+similarAppsAvgPrice             float64
+dtype: object
+(25927, 19) transformed data
+2 features dropped
+(25927, 16) X_all
+(19445, 16) X_train
+(6482, 16) X_eval
+
+y_train value counts:
+2.0    0.279866
+1.0    0.276935
+3.0    0.243250
+4.0    0.199949
+Name: price, dtype: float64
+
+y_eval value counts:
+2.0    0.282320
+1.0    0.279081
+3.0    0.238969
+4.0    0.199630
+Name: price, dtype: float64
+Fitting 3 folds for each of 16 candidates, totalling 48 fits
+[CV] forest__warm_start=True, forest__n_estimators=100, forest__max_features=sqrt, forest__max_depth=11, forest__criterion=gini 
+[CV] forest__warm_start=True, forest__n_estimators=100, forest__max_features=sqrt, forest__max_depth=11, forest__criterion=gini 
+[CV] forest__warm_start=True, forest__n_estimators=100, forest__max_features=sqrt, forest__max_depth=11, forest__criterion=gini 
+[CV] forest__warm_start=True, forest__n_estimators=13, forest__max_features=sqrt, forest__max_depth=11, forest__criterion=entropy 
+[CV] forest__warm_start=True, forest__n_estimators=13, forest__max_features=sqrt, forest__max_depth=11, forest__criterion=entropy 
+[CV] forest__warm_start=True, forest__n_estimators=13, forest__max_features=sqrt, forest__max_depth=11, forest__criterion=entropy 
+[CV] forest__warm_start=True, forest__n_estimators=200, forest__max_features=sqrt, forest__max_depth=9, forest__criterion=entropy 
+[CV] forest__warm_start=True, forest__n_estimators=200, forest__max_features=sqrt, forest__max_depth=9, forest__criterion=entropy 
+[CV]  forest__warm_start=True, forest__n_estimators=13, forest__max_features=sqrt, forest__max_depth=11, forest__criterion=entropy, score=0.15677473121572794, total=  10.1s
+[CV]  forest__warm_start=True, forest__n_estimators=13, forest__max_features=sqrt, forest__max_depth=11, forest__criterion=entropy, score=0.15447485205056521, total=  10.3s
+[CV] forest__warm_start=True, forest__n_estimators=200, forest__max_features=sqrt, forest__max_depth=9, forest__criterion=entropy 
+[CV]  forest__warm_start=True, forest__n_estimators=13, forest__max_features=sqrt, forest__max_depth=11, forest__criterion=entropy, score=0.1469141148163936, total=  10.4s
+[CV] forest__warm_start=False, forest__n_estimators=400, forest__max_features=None, forest__max_depth=11, forest__criterion=entropy 
+[CV] forest__warm_start=False, forest__n_estimators=400, forest__max_features=None, forest__max_depth=11, forest__criterion=entropy 
+[CV]  forest__warm_start=True, forest__n_estimators=100, forest__max_features=sqrt, forest__max_depth=11, forest__criterion=gini, score=0.1864675020242389, total=  13.3s
+[CV] forest__warm_start=False, forest__n_estimators=400, forest__max_features=None, forest__max_depth=11, forest__criterion=entropy 
+[CV]  forest__warm_start=True, forest__n_estimators=100, forest__max_features=sqrt, forest__max_depth=11, forest__criterion=gini, score=0.1767505631373788, total=  13.4s
+[CV]  forest__warm_start=True, forest__n_estimators=100, forest__max_features=sqrt, forest__max_depth=11, forest__criterion=gini, score=0.20266723469998305, total=  13.6s
+[CV] forest__warm_start=False, forest__n_estimators=100, forest__max_features=sqrt, forest__max_depth=7, forest__criterion=gini 
+[CV] forest__warm_start=False, forest__n_estimators=100, forest__max_features=sqrt, forest__max_depth=7, forest__criterion=gini 
+[CV]  forest__warm_start=True, forest__n_estimators=200, forest__max_features=sqrt, forest__max_depth=9, forest__criterion=entropy, score=0.17573123305409621, total=  17.2s
+[CV]  forest__warm_start=True, forest__n_estimators=200, forest__max_features=sqrt, forest__max_depth=9, forest__criterion=entropy, score=0.19565085350824318, total=  17.1s
+[CV] forest__warm_start=False, forest__n_estimators=100, forest__max_features=sqrt, forest__max_depth=7, forest__criterion=gini 
+[CV] forest__warm_start=True, forest__n_estimators=5, forest__max_features=sqrt, forest__max_depth=5, forest__criterion=entropy 
+[CV]  forest__warm_start=False, forest__n_estimators=100, forest__max_features=sqrt, forest__max_depth=7, forest__criterion=gini, score=0.15508019289239483, total=  12.7s
+[CV] forest__warm_start=True, forest__n_estimators=5, forest__max_features=sqrt, forest__max_depth=5, forest__criterion=entropy 
+[CV]  forest__warm_start=False, forest__n_estimators=100, forest__max_features=sqrt, forest__max_depth=7, forest__criterion=gini, score=0.1662186214914818, total=  12.8s
+[CV] forest__warm_start=True, forest__n_estimators=5, forest__max_features=sqrt, forest__max_depth=5, forest__criterion=entropy 
+[CV]  forest__warm_start=True, forest__n_estimators=200, forest__max_features=sqrt, forest__max_depth=9, forest__criterion=entropy, score=0.17090304914371102, total=  17.0s
+[CV] forest__warm_start=True, forest__n_estimators=5, forest__max_features=sqrt, forest__max_depth=7, forest__criterion=entropy 
+[CV]  forest__warm_start=True, forest__n_estimators=5, forest__max_features=sqrt, forest__max_depth=5, forest__criterion=entropy, score=0.0939970512778725, total=  10.9s
+[CV] forest__warm_start=True, forest__n_estimators=5, forest__max_features=sqrt, forest__max_depth=7, forest__criterion=entropy 
+[CV]  forest__warm_start=False, forest__n_estimators=100, forest__max_features=sqrt, forest__max_depth=7, forest__criterion=gini, score=0.14973455344980569, total=  13.2s
+[CV] forest__warm_start=True, forest__n_estimators=5, forest__max_features=sqrt, forest__max_depth=7, forest__criterion=entropy 
+[CV]  forest__warm_start=True, forest__n_estimators=5, forest__max_features=sqrt, forest__max_depth=5, forest__criterion=entropy, score=0.06820977122366101, total=  11.9s
+[CV] forest__warm_start=False, forest__n_estimators=7, forest__max_features=None, forest__max_depth=5, forest__criterion=gini 
+[CV]  forest__warm_start=True, forest__n_estimators=5, forest__max_features=sqrt, forest__max_depth=5, forest__criterion=entropy, score=0.08063761968976424, total=  12.0s
+[CV] forest__warm_start=False, forest__n_estimators=7, forest__max_features=None, forest__max_depth=5, forest__criterion=gini 
+[CV]  forest__warm_start=True, forest__n_estimators=5, forest__max_features=sqrt, forest__max_depth=7, forest__criterion=entropy, score=0.11396901114950231, total=  11.9s
+[CV] forest__warm_start=False, forest__n_estimators=7, forest__max_features=None, forest__max_depth=5, forest__criterion=gini 
+[CV]  forest__warm_start=True, forest__n_estimators=5, forest__max_features=sqrt, forest__max_depth=7, forest__criterion=entropy, score=0.09975618603027114, total=  12.1s
+[CV] forest__warm_start=True, forest__n_estimators=100, forest__max_features=None, forest__max_depth=5, forest__criterion=entropy 
+[CV]  forest__warm_start=True, forest__n_estimators=5, forest__max_features=sqrt, forest__max_depth=7, forest__criterion=entropy, score=0.10260093235826206, total=  12.0s
+[CV] forest__warm_start=True, forest__n_estimators=100, forest__max_features=None, forest__max_depth=5, forest__criterion=entropy 
+[CV]  forest__warm_start=False, forest__n_estimators=7, forest__max_features=None, forest__max_depth=5, forest__criterion=gini, score=0.14257910982881883, total=  18.6s
+[CV] forest__warm_start=True, forest__n_estimators=100, forest__max_features=None, forest__max_depth=5, forest__criterion=entropy 
+[CV]  forest__warm_start=False, forest__n_estimators=7, forest__max_features=None, forest__max_depth=5, forest__criterion=gini, score=0.14412213920210482, total=  18.4s
+[CV] forest__warm_start=False, forest__n_estimators=5, forest__max_features=sqrt, forest__max_depth=11, forest__criterion=gini 
+[CV]  forest__warm_start=False, forest__n_estimators=7, forest__max_features=None, forest__max_depth=5, forest__criterion=gini, score=0.1395288807371221, total=  18.2s
+[CV] forest__warm_start=False, forest__n_estimators=5, forest__max_features=sqrt, forest__max_depth=11, forest__criterion=gini 
+[CV]  forest__warm_start=False, forest__n_estimators=5, forest__max_features=sqrt, forest__max_depth=11, forest__criterion=gini, score=0.1317526169853488, total=  11.0s
+[CV] forest__warm_start=False, forest__n_estimators=5, forest__max_features=sqrt, forest__max_depth=11, forest__criterion=gini 
+[CV]  forest__warm_start=False, forest__n_estimators=5, forest__max_features=sqrt, forest__max_depth=11, forest__criterion=gini, score=0.12466125206676726, total=  10.9s
+[CV] forest__warm_start=True, forest__n_estimators=11, forest__max_features=None, forest__max_depth=7, forest__criterion=gini 
+[CV]  forest__warm_start=False, forest__n_estimators=5, forest__max_features=sqrt, forest__max_depth=11, forest__criterion=gini, score=0.10994548657738368, total=  10.4s
+[CV] forest__warm_start=True, forest__n_estimators=11, forest__max_features=None, forest__max_depth=7, forest__criterion=gini 
+[CV]  forest__warm_start=True, forest__n_estimators=11, forest__max_features=None, forest__max_depth=7, forest__criterion=gini, score=0.17309247569173958, total=  27.6s
+[CV] forest__warm_start=True, forest__n_estimators=11, forest__max_features=None, forest__max_depth=7, forest__criterion=gini 
+[CV]  forest__warm_start=True, forest__n_estimators=11, forest__max_features=None, forest__max_depth=7, forest__criterion=gini, score=0.1755392211396576, total=  27.2s
+[CV] forest__warm_start=True, forest__n_estimators=5, forest__max_features=sqrt, forest__max_depth=9, forest__criterion=gini 
+[CV]  forest__warm_start=True, forest__n_estimators=5, forest__max_features=sqrt, forest__max_depth=9, forest__criterion=gini, score=0.11847157762115867, total=   9.9s
+[CV]  forest__warm_start=True, forest__n_estimators=11, forest__max_features=None, forest__max_depth=7, forest__criterion=gini, score=0.16466669631202024, total=  26.2s
+[CV] forest__warm_start=True, forest__n_estimators=5, forest__max_features=sqrt, forest__max_depth=9, forest__criterion=gini 
+[CV] forest__warm_start=True, forest__n_estimators=5, forest__max_features=sqrt, forest__max_depth=9, forest__criterion=gini 
+[CV]  forest__warm_start=True, forest__n_estimators=100, forest__max_features=None, forest__max_depth=5, forest__criterion=entropy, score=0.15257606686407477, total= 1.9min
+[CV] forest__warm_start=False, forest__n_estimators=600, forest__max_features=None, forest__max_depth=11, forest__criterion=entropy 
+[CV]  forest__warm_start=True, forest__n_estimators=100, forest__max_features=None, forest__max_depth=5, forest__criterion=entropy, score=0.15696490124098694, total= 1.9min
+[CV] forest__warm_start=False, forest__n_estimators=600, forest__max_features=None, forest__max_depth=11, forest__criterion=entropy 
+[CV]  forest__warm_start=True, forest__n_estimators=5, forest__max_features=sqrt, forest__max_depth=9, forest__criterion=gini, score=0.10831358861608464, total=   9.9s
+[CV]  forest__warm_start=True, forest__n_estimators=5, forest__max_features=sqrt, forest__max_depth=9, forest__criterion=gini, score=0.10405923006164519, total=   9.9s
+[CV] forest__warm_start=False, forest__n_estimators=600, forest__max_features=None, forest__max_depth=11, forest__criterion=entropy 
+[CV] forest__warm_start=False, forest__n_estimators=200, forest__max_features=None, forest__max_depth=5, forest__criterion=gini 
+[CV]  forest__warm_start=True, forest__n_estimators=100, forest__max_features=None, forest__max_depth=5, forest__criterion=entropy, score=0.1428842445092835, total= 1.8min
+[CV] forest__warm_start=False, forest__n_estimators=200, forest__max_features=None, forest__max_depth=5, forest__criterion=gini 
+[CV]  forest__warm_start=False, forest__n_estimators=200, forest__max_features=None, forest__max_depth=5, forest__criterion=gini, score=0.15366737359638893, total= 2.9min
+[CV] forest__warm_start=False, forest__n_estimators=200, forest__max_features=None, forest__max_depth=5, forest__criterion=gini 
+[CV]  forest__warm_start=False, forest__n_estimators=200, forest__max_features=None, forest__max_depth=5, forest__criterion=gini, score=0.16560385484162965, total= 2.9min
+[CV] forest__warm_start=True, forest__n_estimators=600, forest__max_features=None, forest__max_depth=5, forest__criterion=entropy 
+[CV]  forest__warm_start=False, forest__n_estimators=200, forest__max_features=None, forest__max_depth=5, forest__criterion=gini, score=0.14357475874765813, total= 2.8min
+[CV] forest__warm_start=True, forest__n_estimators=600, forest__max_features=None, forest__max_depth=5, forest__criterion=entropy 
+[CV]  forest__warm_start=True, forest__n_estimators=600, forest__max_features=None, forest__max_depth=5, forest__criterion=entropy, score=0.1554656992396527, total= 9.4min
+[CV] forest__warm_start=True, forest__n_estimators=600, forest__max_features=None, forest__max_depth=5, forest__criterion=entropy 
+[CV]  forest__warm_start=True, forest__n_estimators=600, forest__max_features=None, forest__max_depth=5, forest__criterion=entropy, score=0.16157448868910684, total= 9.5min
+[CV] forest__warm_start=False, forest__n_estimators=11, forest__max_features=None, forest__max_depth=11, forest__criterion=entropy 
+[CV]  forest__warm_start=False, forest__n_estimators=11, forest__max_features=None, forest__max_depth=11, forest__criterion=entropy, score=0.20606979237867928, total=  50.5s
+[CV] forest__warm_start=False, forest__n_estimators=11, forest__max_features=None, forest__max_depth=11, forest__criterion=entropy 
+[CV]  forest__warm_start=False, forest__n_estimators=11, forest__max_features=None, forest__max_depth=11, forest__criterion=entropy, score=0.2108263337054942, total=  47.1s
+[CV] forest__warm_start=False, forest__n_estimators=11, forest__max_features=None, forest__max_depth=11, forest__criterion=entropy 
+[CV]  forest__warm_start=False, forest__n_estimators=11, forest__max_features=None, forest__max_depth=11, forest__criterion=entropy, score=0.1989224502677599, total=  46.0s
+[CV]  forest__warm_start=False, forest__n_estimators=400, forest__max_features=None, forest__max_depth=11, forest__criterion=entropy, score=0.20816430645891648, total=23.2min
+[CV]  forest__warm_start=False, forest__n_estimators=400, forest__max_features=None, forest__max_depth=11, forest__criterion=entropy, score=0.24565386072425344, total=23.8min
+[CV]  forest__warm_start=False, forest__n_estimators=400, forest__max_features=None, forest__max_depth=11, forest__criterion=entropy, score=0.21718010698197443, total=24.3min
+[CV]  forest__warm_start=True, forest__n_estimators=600, forest__max_features=None, forest__max_depth=5, forest__criterion=entropy, score=0.14503219448532967, total= 8.7min
+[CV]  forest__warm_start=False, forest__n_estimators=600, forest__max_features=None, forest__max_depth=11, forest__criterion=entropy, score=0.21227312532262488, total=28.7min
+[CV]  forest__warm_start=False, forest__n_estimators=600, forest__max_features=None, forest__max_depth=11, forest__criterion=entropy, score=0.24101357239493315, total=29.5min
+[CV]  forest__warm_start=False, forest__n_estimators=600, forest__max_features=None, forest__max_depth=11, forest__criterion=entropy, score=0.2165242771692254, total=29.9min
+
+
+score_precision_eval_mean=0.446 (+/- 0.0677)
+score_recall_eval_mean=0.42 (+/- 0.135)
+score_f1_eval_mean=0.418 (+/- 0.0562)
+score_accuracy_eval=0.427
+Fitting 3 folds for each of 16 candidates, totalling 48 fits
+[CV] gradient__n_estimators=5, gradient__max_features=None, gradient__max_depth=9, gradient__loss=deviance, gradient__learning_rate=1000 
+[CV] gradient__n_estimators=5, gradient__max_features=None, gradient__max_depth=9, gradient__loss=deviance, gradient__learning_rate=1000 
+[CV] gradient__n_estimators=5, gradient__max_features=None, gradient__max_depth=9, gradient__loss=deviance, gradient__learning_rate=1000 
+[CV] gradient__n_estimators=400, gradient__max_features=None, gradient__max_depth=11, gradient__loss=deviance, gradient__learning_rate=0.001 
+[CV] gradient__n_estimators=400, gradient__max_features=None, gradient__max_depth=11, gradient__loss=deviance, gradient__learning_rate=0.001 
+[CV] gradient__n_estimators=400, gradient__max_features=None, gradient__max_depth=11, gradient__loss=deviance, gradient__learning_rate=0.001 
+[CV] gradient__n_estimators=13, gradient__max_features=None, gradient__max_depth=5, gradient__loss=deviance, gradient__learning_rate=0.8 
+[CV] gradient__n_estimators=13, gradient__max_features=None, gradient__max_depth=5, gradient__loss=deviance, gradient__learning_rate=0.8 
+[CV]  gradient__n_estimators=13, gradient__max_features=None, gradient__max_depth=5, gradient__loss=deviance, gradient__learning_rate=0.8, score=0.2177557840178732, total=  51.2s
+[CV]  gradient__n_estimators=5, gradient__max_features=None, gradient__max_depth=9, gradient__loss=deviance, gradient__learning_rate=1000, score=-0.0388252768954227, total=  52.6s
+[CV] gradient__n_estimators=13, gradient__max_features=None, gradient__max_depth=5, gradient__loss=deviance, gradient__learning_rate=0.8 
+[CV] gradient__n_estimators=200, gradient__max_features=sqrt, gradient__max_depth=9, gradient__loss=deviance, gradient__learning_rate=100 
+[CV]  gradient__n_estimators=13, gradient__max_features=None, gradient__max_depth=5, gradient__loss=deviance, gradient__learning_rate=0.8, score=0.22749860770657515, total=  51.8s
+[CV] gradient__n_estimators=200, gradient__max_features=sqrt, gradient__max_depth=9, gradient__loss=deviance, gradient__learning_rate=100 
+[CV]  gradient__n_estimators=5, gradient__max_features=None, gradient__max_depth=9, gradient__loss=deviance, gradient__learning_rate=1000, score=-0.0419404343323706, total= 1.0min
+[CV] gradient__n_estimators=200, gradient__max_features=sqrt, gradient__max_depth=9, gradient__loss=deviance, gradient__learning_rate=100 
+[CV]  gradient__n_estimators=5, gradient__max_features=None, gradient__max_depth=9, gradient__loss=deviance, gradient__learning_rate=1000, score=-0.010819945676034726, total= 1.1min
+[CV] gradient__n_estimators=11, gradient__max_features=sqrt, gradient__max_depth=11, gradient__loss=deviance, gradient__learning_rate=1000 
+[CV]  gradient__n_estimators=11, gradient__max_features=sqrt, gradient__max_depth=11, gradient__loss=deviance, gradient__learning_rate=1000, score=-0.00238620243078147, total=  11.8s
+[CV] gradient__n_estimators=11, gradient__max_features=sqrt, gradient__max_depth=11, gradient__loss=deviance, gradient__learning_rate=1000 
+[CV]  gradient__n_estimators=200, gradient__max_features=sqrt, gradient__max_depth=9, gradient__loss=deviance, gradient__learning_rate=100, score=-0.022056229966001872, total=  39.2s
+[CV] gradient__n_estimators=11, gradient__max_features=sqrt, gradient__max_depth=11, gradient__loss=deviance, gradient__learning_rate=1000 
+[CV]  gradient__n_estimators=11, gradient__max_features=sqrt, gradient__max_depth=11, gradient__loss=deviance, gradient__learning_rate=1000, score=-0.019984264358772652, total=  11.4s
+[CV]  gradient__n_estimators=200, gradient__max_features=sqrt, gradient__max_depth=9, gradient__loss=deviance, gradient__learning_rate=100, score=-0.006818857773533971, total=  39.6s
+[CV] gradient__n_estimators=600, gradient__max_features=None, gradient__max_depth=7, gradient__loss=deviance, gradient__learning_rate=0.1 
+[CV] gradient__n_estimators=600, gradient__max_features=None, gradient__max_depth=7, gradient__loss=deviance, gradient__learning_rate=0.1 
+[CV]  gradient__n_estimators=200, gradient__max_features=sqrt, gradient__max_depth=9, gradient__loss=deviance, gradient__learning_rate=100, score=-0.01051882327525644, total=  38.5s
+[CV] gradient__n_estimators=600, gradient__max_features=None, gradient__max_depth=7, gradient__loss=deviance, gradient__learning_rate=0.1 
+[CV]  gradient__n_estimators=13, gradient__max_features=None, gradient__max_depth=5, gradient__loss=deviance, gradient__learning_rate=0.8, score=0.2252532281918861, total=  50.6s
+[CV] gradient__n_estimators=400, gradient__max_features=None, gradient__max_depth=11, gradient__loss=deviance, gradient__learning_rate=1000 
+[CV]  gradient__n_estimators=11, gradient__max_features=sqrt, gradient__max_depth=11, gradient__loss=deviance, gradient__learning_rate=1000, score=-0.01971599042254346, total=  11.7s
+[CV] gradient__n_estimators=400, gradient__max_features=None, gradient__max_depth=11, gradient__loss=deviance, gradient__learning_rate=1000 
+[CV]  gradient__n_estimators=600, gradient__max_features=None, gradient__max_depth=7, gradient__loss=deviance, gradient__learning_rate=0.1, score=0.2961339735343729, total=37.9min
+[CV] gradient__n_estimators=400, gradient__max_features=None, gradient__max_depth=11, gradient__loss=deviance, gradient__learning_rate=1000 
+[CV]  gradient__n_estimators=600, gradient__max_features=None, gradient__max_depth=7, gradient__loss=deviance, gradient__learning_rate=0.1, score=0.2919545827468849, total=38.2min
+[CV] gradient__n_estimators=5, gradient__max_features=sqrt, gradient__max_depth=11, gradient__loss=deviance, gradient__learning_rate=1 
+[CV]  gradient__n_estimators=600, gradient__max_features=None, gradient__max_depth=7, gradient__loss=deviance, gradient__learning_rate=0.1, score=0.31123293097711324, total=38.3min
+[CV] gradient__n_estimators=5, gradient__max_features=sqrt, gradient__max_depth=11, gradient__loss=deviance, gradient__learning_rate=1 
+[CV]  gradient__n_estimators=5, gradient__max_features=sqrt, gradient__max_depth=11, gradient__loss=deviance, gradient__learning_rate=1, score=0.1696328261950817, total=  10.2s
+[CV] gradient__n_estimators=5, gradient__max_features=sqrt, gradient__max_depth=11, gradient__loss=deviance, gradient__learning_rate=1 
+[CV]  gradient__n_estimators=5, gradient__max_features=sqrt, gradient__max_depth=11, gradient__loss=deviance, gradient__learning_rate=1, score=0.1748589460739991, total=  10.2s
+[CV] gradient__n_estimators=5, gradient__max_features=sqrt, gradient__max_depth=11, gradient__loss=deviance, gradient__learning_rate=0.1 
+[CV]  gradient__n_estimators=5, gradient__max_features=sqrt, gradient__max_depth=11, gradient__loss=deviance, gradient__learning_rate=1, score=0.1671044740262002, total=  10.3s
+[CV] gradient__n_estimators=5, gradient__max_features=sqrt, gradient__max_depth=11, gradient__loss=deviance, gradient__learning_rate=0.1 
+[CV]  gradient__n_estimators=5, gradient__max_features=sqrt, gradient__max_depth=11, gradient__loss=deviance, gradient__learning_rate=0.1, score=0.1593195047373238, total=  10.6s
+[CV] gradient__n_estimators=5, gradient__max_features=sqrt, gradient__max_depth=11, gradient__loss=deviance, gradient__learning_rate=0.1 
+[CV]  gradient__n_estimators=5, gradient__max_features=sqrt, gradient__max_depth=11, gradient__loss=deviance, gradient__learning_rate=0.1, score=0.16175550245985582, total=  10.4s
+[CV] gradient__n_estimators=11, gradient__max_features=None, gradient__max_depth=9, gradient__loss=deviance, gradient__learning_rate=0.001 
+[CV]  gradient__n_estimators=5, gradient__max_features=sqrt, gradient__max_depth=11, gradient__loss=deviance, gradient__learning_rate=0.1, score=0.1447709013516737, total=  10.5s
+[CV] gradient__n_estimators=11, gradient__max_features=None, gradient__max_depth=9, gradient__loss=deviance, gradient__learning_rate=0.001 
+[CV]  gradient__n_estimators=11, gradient__max_features=None, gradient__max_depth=9, gradient__loss=deviance, gradient__learning_rate=0.001, score=0.05667770061784971, total= 1.7min
+[CV] gradient__n_estimators=11, gradient__max_features=None, gradient__max_depth=9, gradient__loss=deviance, gradient__learning_rate=0.001 
+[CV]  gradient__n_estimators=11, gradient__max_features=None, gradient__max_depth=9, gradient__loss=deviance, gradient__learning_rate=0.001, score=0.0641216235066846, total= 1.7min
+[CV] gradient__n_estimators=13, gradient__max_features=None, gradient__max_depth=7, gradient__loss=deviance, gradient__learning_rate=1000 
+[CV]  gradient__n_estimators=13, gradient__max_features=None, gradient__max_depth=7, gradient__loss=deviance, gradient__learning_rate=1000, score=-0.008434190702027777, total= 1.5min
+[CV] gradient__n_estimators=13, gradient__max_features=None, gradient__max_depth=7, gradient__loss=deviance, gradient__learning_rate=1000 
+[CV]  gradient__n_estimators=11, gradient__max_features=None, gradient__max_depth=9, gradient__loss=deviance, gradient__learning_rate=0.001, score=0.056647624800334584, total= 1.7min
+[CV] gradient__n_estimators=13, gradient__max_features=None, gradient__max_depth=7, gradient__loss=deviance, gradient__learning_rate=1000 
+[CV]  gradient__n_estimators=13, gradient__max_features=None, gradient__max_depth=7, gradient__loss=deviance, gradient__learning_rate=1000, score=-0.028841532565445416, total= 1.4min
+[CV] gradient__n_estimators=5, gradient__max_features=None, gradient__max_depth=5, gradient__loss=deviance, gradient__learning_rate=1000 
+[CV]  gradient__n_estimators=13, gradient__max_features=None, gradient__max_depth=7, gradient__loss=deviance, gradient__learning_rate=1000, score=0.028373575296535503, total= 1.6min
+[CV] gradient__n_estimators=5, gradient__max_features=None, gradient__max_depth=5, gradient__loss=deviance, gradient__learning_rate=1000 
+[CV]  gradient__n_estimators=5, gradient__max_features=None, gradient__max_depth=5, gradient__loss=deviance, gradient__learning_rate=1000, score=-0.06456894693758897, total=  26.7s
+[CV] gradient__n_estimators=5, gradient__max_features=None, gradient__max_depth=5, gradient__loss=deviance, gradient__learning_rate=1000 
+[CV]  gradient__n_estimators=5, gradient__max_features=None, gradient__max_depth=5, gradient__loss=deviance, gradient__learning_rate=1000, score=-0.08783603928607042, total=  27.2s
+[CV] gradient__n_estimators=100, gradient__max_features=sqrt, gradient__max_depth=7, gradient__loss=deviance, gradient__learning_rate=0.8 
+[CV]  gradient__n_estimators=5, gradient__max_features=None, gradient__max_depth=5, gradient__loss=deviance, gradient__learning_rate=1000, score=-0.06661397312912776, total=  27.9s
+[CV] gradient__n_estimators=100, gradient__max_features=sqrt, gradient__max_depth=7, gradient__loss=deviance, gradient__learning_rate=0.8 
+[CV]  gradient__n_estimators=100, gradient__max_features=sqrt, gradient__max_depth=7, gradient__loss=deviance, gradient__learning_rate=0.8, score=0.25123597465659464, total=  18.4s
+[CV] gradient__n_estimators=100, gradient__max_features=sqrt, gradient__max_depth=7, gradient__loss=deviance, gradient__learning_rate=0.8 
+[CV]  gradient__n_estimators=100, gradient__max_features=sqrt, gradient__max_depth=7, gradient__loss=deviance, gradient__learning_rate=0.8, score=0.2528391015600264, total=  18.4s
+[CV] gradient__n_estimators=200, gradient__max_features=sqrt, gradient__max_depth=11, gradient__loss=deviance, gradient__learning_rate=10 
+[CV]  gradient__n_estimators=100, gradient__max_features=sqrt, gradient__max_depth=7, gradient__loss=deviance, gradient__learning_rate=0.8, score=0.24536549394713703, total=  18.2s
+[CV] gradient__n_estimators=200, gradient__max_features=sqrt, gradient__max_depth=11, gradient__loss=deviance, gradient__learning_rate=10 
+[CV]  gradient__n_estimators=200, gradient__max_features=sqrt, gradient__max_depth=11, gradient__loss=deviance, gradient__learning_rate=10, score=-0.019477012381880154, total=  53.0s
+[CV] gradient__n_estimators=200, gradient__max_features=sqrt, gradient__max_depth=11, gradient__loss=deviance, gradient__learning_rate=10 
+[CV]  gradient__n_estimators=200, gradient__max_features=sqrt, gradient__max_depth=11, gradient__loss=deviance, gradient__learning_rate=10, score=7.114986385803324e-05, total=  54.0s
+[CV] gradient__n_estimators=5, gradient__max_features=None, gradient__max_depth=9, gradient__loss=deviance, gradient__learning_rate=0.8 
+[CV]  gradient__n_estimators=200, gradient__max_features=sqrt, gradient__max_depth=11, gradient__loss=deviance, gradient__learning_rate=10, score=-0.01068822769651967, total=  50.5s
+[CV] gradient__n_estimators=5, gradient__max_features=None, gradient__max_depth=9, gradient__loss=deviance, gradient__learning_rate=0.8 
+[CV]  gradient__n_estimators=5, gradient__max_features=None, gradient__max_depth=9, gradient__loss=deviance, gradient__learning_rate=0.8, score=0.22599709333154383, total=  48.3s
+[CV] gradient__n_estimators=5, gradient__max_features=None, gradient__max_depth=9, gradient__loss=deviance, gradient__learning_rate=0.8 
+[CV]  gradient__n_estimators=5, gradient__max_features=None, gradient__max_depth=9, gradient__loss=deviance, gradient__learning_rate=0.8, score=0.21903038944107145, total=  47.0s
+[CV] gradient__n_estimators=5, gradient__max_features=sqrt, gradient__max_depth=9, gradient__loss=deviance, gradient__learning_rate=10 
+[CV]  gradient__n_estimators=5, gradient__max_features=None, gradient__max_depth=9, gradient__loss=deviance, gradient__learning_rate=0.8, score=0.21434559545486598, total=  47.5s
+[CV] gradient__n_estimators=5, gradient__max_features=sqrt, gradient__max_depth=9, gradient__loss=deviance, gradient__learning_rate=10 
+[CV]  gradient__n_estimators=5, gradient__max_features=sqrt, gradient__max_depth=9, gradient__loss=deviance, gradient__learning_rate=10, score=-0.007989650430376027, total=  10.1s
+[CV] gradient__n_estimators=5, gradient__max_features=sqrt, gradient__max_depth=9, gradient__loss=deviance, gradient__learning_rate=10 
+[CV]  gradient__n_estimators=5, gradient__max_features=sqrt, gradient__max_depth=9, gradient__loss=deviance, gradient__learning_rate=10, score=0.017708680370271512, total=  10.2s
+[CV]  gradient__n_estimators=5, gradient__max_features=sqrt, gradient__max_depth=9, gradient__loss=deviance, gradient__learning_rate=10, score=-0.0148624063297087, total=   9.4s
+[CV]  gradient__n_estimators=400, gradient__max_features=None, gradient__max_depth=11, gradient__loss=deviance, gradient__learning_rate=0.001, score=0.2204760018196502, total=86.1min
+[CV]  gradient__n_estimators=400, gradient__max_features=None, gradient__max_depth=11, gradient__loss=deviance, gradient__learning_rate=0.001, score=0.21947548191365895, total=89.4min
+[CV]  gradient__n_estimators=400, gradient__max_features=None, gradient__max_depth=11, gradient__loss=deviance, gradient__learning_rate=0.001, score=0.21077719166811204, total=90.1min
+[CV]  gradient__n_estimators=400, gradient__max_features=None, gradient__max_depth=11, gradient__loss=deviance, gradient__learning_rate=1000, score=-0.05256275582152292, total=97.0min
+[CV]  gradient__n_estimators=400, gradient__max_features=None, gradient__max_depth=11, gradient__loss=deviance, gradient__learning_rate=1000, score=-0.05440044500055663, total=99.2min
+[CV]  gradient__n_estimators=400, gradient__max_features=None, gradient__max_depth=11, gradient__loss=deviance, gradient__learning_rate=1000, score=-0.061755598694251734, total=78.3min
+
+
+score_precision_eval_mean=0.502 (+/- 0.0551)
+score_recall_eval_mean=0.491 (+/- 0.0603)
+score_f1_eval_mean=0.495 (+/- 0.0464)
+score_accuracy_eval=0.494
